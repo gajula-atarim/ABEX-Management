@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ABEX_VERSION', '1.0.0' );
+define( 'ABEX_VERSION', '1.0.1' );
 
 /**
  * Enqueue the parent stylesheet, the ABEX webfonts and the design system.
@@ -252,9 +252,9 @@ function abex_enquiry_form_shortcode() {
 				<select name="abex_service">
 					<option>Select a service</option>
 					<option>Project management systems and controls</option>
-					<option>Construction planning and scheduling</option>
+					<option>Project planning and scheduling</option>
 					<option>Procurement management</option>
-					<option>Contracts and claims management</option>
+					<option>Contracts Management</option>
 					<option>Dispute resolution</option>
 					<option>Other</option>
 				</select>

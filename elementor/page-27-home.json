@@ -48,7 +48,7 @@
             "id": "herailw1",
             "elType": "widget",
             "settings": {
-              "html": "<div class=\"abex-rail__in\"><a href=\"tel:+61755435553\">+61 (07) 5543 5553</a><span></span><a href=\"mailto:abex@abex.com.au\">abex@abex.com.au</a></div>"
+              "html": "<div class=\"abex-rail__in\"><a href=\"tel:+61755435553\">+61 (0) 7 55435553</a><span></span><a href=\"mailto:abex@abex.com.au\">abex@abex.com.au</a></div>"
             },
             "elements": [],
             "widgetType": "html"
@@ -90,7 +90,7 @@
             "id": "8817d51",
             "elType": "widget",
             "settings": {
-              "html": "<style>\n.abex-heroslides-w { position: absolute !important; inset: 0; z-index: 0 !important; }\n.abex-heroslides-w .elementor-widget-container { position: absolute; inset: 0; }\n.abex-heroslides { position: absolute; inset: 0; overflow: hidden; }\n.abex-heroslides img {\n  position: absolute; inset: 0; width: 100%; height: 100%;\n  object-fit: cover; object-position: 60% center;\n  opacity: 0; transform: scale(1);\n  transition: opacity 1.4s ease, transform 7s linear;\n}\n.abex-heroslides img.is-on { opacity: 1; transform: scale(1.08); }\n.abex-heroslides__dots {\n  position: absolute; right: clamp(20px, 4vw, 48px); bottom: 32px; z-index: 3;\n  display: flex; gap: 10px; align-items: center;\n}\n.abex-heroslides__dots button {\n  width: 56px; height: 4px; padding: 0; border: 0; border-radius: 0;\n  background: rgba(255, 255, 255, .35); cursor: pointer;\n  position: relative; overflow: hidden;\n}\n.abex-heroslides__dots span {\n  position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #fff;\n}\n.abex-heroslides__dots button.is-on span { width: 100%; transition: width 6s linear; }\n@media (prefers-reduced-motion: reduce) {\n  .abex-heroslides img { transition: none; }\n  .abex-heroslides img.is-on { transform: none; }\n  .abex-heroslides__dots button.is-on span { transition: none; }\n}\n</style>\n\n<div class=\"abex-heroslides\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-hydro-power-facility.jpg\" alt=\"Hydroelectric power facility\" class=\"is-on\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-open-pit-mine.jpg\" alt=\"Open-pit mine\" loading=\"lazy\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-hydro-power-station.jpg\" alt=\"Hydroelectric power station\" loading=\"lazy\">\n  <div class=\"abex-heroslides__dots\">\n    <button type=\"button\" class=\"is-on\" aria-label=\"Show image 1\"><span></span></button>\n    <button type=\"button\" aria-label=\"Show image 2\"><span></span></button>\n    <button type=\"button\" aria-label=\"Show image 3\"><span></span></button>\n  </div>\n</div>\n\n<script>\n/* Hero slider: three images on a 6s cycle, as in ABEX_Home_v3.dc.html.\n   Elementor free has no Slides widget, so this is hand-rolled. With JS off the\n   first image stays put and the container background shows through regardless. */\n( function () {\n\t'use strict';\n\n\tfunction init( root ) {\n\t\tvar imgs = root.querySelectorAll( 'img' );\n\t\tvar dots = root.querySelectorAll( '.abex-heroslides__dots button' );\n\t\tif ( imgs.length < 2 ) { return; }\n\n\t\tvar at = 0;\n\t\tvar timer = null;\n\t\tvar reduced = window.matchMedia &&\n\t\t\twindow.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;\n\n\t\tfunction show( i ) {\n\t\t\tat = ( i + imgs.length ) % imgs.length;\n\t\t\tfor ( var n = 0; n < imgs.length; n++ ) {\n\t\t\t\timgs[ n ].classList.toggle( 'is-on', n === at );\n\t\t\t\tif ( dots[ n ] ) {\n\t\t\t\t\t/* Reset the bar to zero width with no transition, then let the\n\t\t\t\t\t   class re-apply it, or it would ease back down. */\n\t\t\t\t\tdots[ n ].classList.remove( 'is-on' );\n\t\t\t\t\tvoid dots[ n ].offsetWidth;\n\t\t\t\t\tdots[ n ].classList.toggle( 'is-on', n === at );\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tfunction start() {\n\t\t\tif ( reduced ) { return; }\n\t\t\twindow.clearInterval( timer );\n\t\t\ttimer = window.setInterval( function () { show( at + 1 ); }, 6000 );\n\t\t}\n\n\t\tfor ( var d = 0; d < dots.length; d++ ) {\n\t\t\t( function ( i ) {\n\t\t\t\tdots[ i ].addEventListener( 'click', function () { show( i ); start(); } );\n\t\t\t} )( d );\n\t\t}\n\n\t\tshow( 0 );\n\t\tstart();\n\n\t\t/* Nothing to animate while the tab is hidden. */\n\t\tdocument.addEventListener( 'visibilitychange', function () {\n\t\t\tif ( document.hidden ) { window.clearInterval( timer ); } else { start(); }\n\t\t} );\n\t}\n\n\tfunction boot() {\n\t\tvar nodes = document.querySelectorAll( '.abex-heroslides' );\n\t\tfor ( var i = 0; i < nodes.length; i++ ) {\n\t\t\tif ( ! nodes[ i ].hasAttribute( 'data-abex-ready' ) ) {\n\t\t\t\tnodes[ i ].setAttribute( 'data-abex-ready', '1' );\n\t\t\t\tinit( nodes[ i ] );\n\t\t\t}\n\t\t}\n\t}\n\n\tif ( document.readyState === 'loading' ) {\n\t\tdocument.addEventListener( 'DOMContentLoaded', boot );\n\t} else {\n\t\tboot();\n\t}\n}() );\n</script>",
+              "html": "<style>\n.abex-heroslides-w { position: absolute !important; inset: 0; z-index: 0 !important; }\n.abex-heroslides-w .elementor-widget-container { position: absolute; inset: 0; }\n.abex-heroslides { position: absolute; inset: 0; overflow: hidden; }\n.abex-heroslides img {\n  position: absolute; inset: 0; width: 100%; height: 100%;\n  object-fit: cover; object-position: 60% center;\n  opacity: 0; transform: scale(1);\n  transition: opacity 1.4s ease, transform 7s linear;\n}\n.abex-heroslides img.is-on { opacity: 1; transform: scale(1.08); }\n.abex-heroslides__dots {\n  position: absolute; right: clamp(20px, 4vw, 48px); bottom: 32px; z-index: 3;\n  display: flex; gap: 10px; align-items: center;\n}\n.abex-heroslides__dots button {\n  width: 56px; height: 4px; padding: 0; border: 0; border-radius: 0;\n  background: rgba(255, 255, 255, .35); cursor: pointer;\n  position: relative; overflow: hidden;\n}\n.abex-heroslides__dots span {\n  position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #fff;\n}\n.abex-heroslides__dots button.is-on span { width: 100%; transition: width 6s linear; }\n@media (prefers-reduced-motion: reduce) {\n  .abex-heroslides img { transition: none; }\n  .abex-heroslides img.is-on { transform: none; }\n  .abex-heroslides__dots button.is-on span { transition: none; }\n}\n</style>\n\n<div class=\"abex-heroslides\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-mine-headframe.jpg\" alt=\"Mine headframes against a blue sky\" class=\"is-on\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-open-pit-mine.jpg\" alt=\"Open-pit mine\" loading=\"lazy\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-power-station.jpg\" alt=\"Power station cooling towers beside an open-cut mine\" loading=\"lazy\">\n  <div class=\"abex-heroslides__dots\">\n    <button type=\"button\" class=\"is-on\" aria-label=\"Show image 1\"><span></span></button>\n    <button type=\"button\" aria-label=\"Show image 2\"><span></span></button>\n    <button type=\"button\" aria-label=\"Show image 3\"><span></span></button>\n  </div>\n</div>\n\n<script>\n/* Hero slider: three images on a 6s cycle, as in ABEX_Home_v3.dc.html.\n   Elementor free has no Slides widget, so this is hand-rolled. With JS off the\n   first image stays put and the container background shows through regardless. */\n( function () {\n\t'use strict';\n\n\tfunction init( root ) {\n\t\tvar imgs = root.querySelectorAll( 'img' );\n\t\tvar dots = root.querySelectorAll( '.abex-heroslides__dots button' );\n\t\tif ( imgs.length < 2 ) { return; }\n\n\t\tvar at = 0;\n\t\tvar timer = null;\n\t\tvar reduced = window.matchMedia &&\n\t\t\twindow.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;\n\n\t\tfunction show( i ) {\n\t\t\tat = ( i + imgs.length ) % imgs.length;\n\t\t\tfor ( var n = 0; n < imgs.length; n++ ) {\n\t\t\t\timgs[ n ].classList.toggle( 'is-on', n === at );\n\t\t\t\tif ( dots[ n ] ) {\n\t\t\t\t\t/* Reset the bar to zero width with no transition, then let the\n\t\t\t\t\t   class re-apply it, or it would ease back down. */\n\t\t\t\t\tdots[ n ].classList.remove( 'is-on' );\n\t\t\t\t\tvoid dots[ n ].offsetWidth;\n\t\t\t\t\tdots[ n ].classList.toggle( 'is-on', n === at );\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tfunction start() {\n\t\t\tif ( reduced ) { return; }\n\t\t\twindow.clearInterval( timer );\n\t\t\ttimer = window.setInterval( function () { show( at + 1 ); }, 6000 );\n\t\t}\n\n\t\tfor ( var d = 0; d < dots.length; d++ ) {\n\t\t\t( function ( i ) {\n\t\t\t\tdots[ i ].addEventListener( 'click', function () { show( i ); start(); } );\n\t\t\t} )( d );\n\t\t}\n\n\t\tshow( 0 );\n\t\tstart();\n\n\t\t/* Nothing to animate while the tab is hidden. */\n\t\tdocument.addEventListener( 'visibilitychange', function () {\n\t\t\tif ( document.hidden ) { window.clearInterval( timer ); } else { start(); }\n\t\t} );\n\t}\n\n\tfunction boot() {\n\t\tvar nodes = document.querySelectorAll( '.abex-heroslides' );\n\t\tfor ( var i = 0; i < nodes.length; i++ ) {\n\t\t\tif ( ! nodes[ i ].hasAttribute( 'data-abex-ready' ) ) {\n\t\t\t\tnodes[ i ].setAttribute( 'data-abex-ready', '1' );\n\t\t\t\tinit( nodes[ i ] );\n\t\t\t}\n\t\t}\n\t}\n\n\tif ( document.readyState === 'loading' ) {\n\t\tdocument.addEventListener( 'DOMContentLoaded', boot );\n\t} else {\n\t\tboot();\n\t}\n}() );\n</script>",
               "_css_classes": "abex-heroslides-w"
             },
             "elements": [],
@@ -123,7 +123,7 @@
                 "id": "heropill",
                 "elType": "widget",
                 "settings": {
-                  "title": "Business and Project Management Consultants",
+                  "title": "Project and Business Management Consultants",
                   "header_size": "div",
                   "_css_classes": "abex-pill abex-pill--glass"
                 },
@@ -134,7 +134,7 @@
                 "id": "heroh1",
                 "elType": "widget",
                 "settings": {
-                  "title": "Better performance and outcomes for your projects",
+                  "title": "Striving to achieve successful outcomes for your projects and businesses",
                   "header_size": "h1",
                   "title_color": "#FFFFFF",
                   "_css_classes": "abex-h1"
@@ -146,7 +146,7 @@
                 "id": "herolead",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>ABEX Management Services specialises in efficient, effective and economic solutions to improve the performance and outcomes of our clients&rsquo; businesses or projects.</p>",
+                  "editor": "<p>ABEX Management Services specialises in efficient, effective and economic solutions to improve the performance and outcomes of our clients&rsquo; projects and businesses.</p>",
                   "text_color": "#FFFFFF",
                   "_css_classes": "abex-lead"
                 },
@@ -381,7 +381,7 @@
             "id": "abtcon",
             "elType": "widget",
             "settings": {
-              "html": "<div style=\"display:grid;gap:4px;font-weight:600;font-size:15px;padding:6px 0\"><span>PHONE: +61 (07) 5543 5553</span><span>EMAIL: abex@abex.com.au</span></div>"
+              "html": "<div style=\"display:grid;gap:4px;font-weight:600;font-size:15px;padding:6px 0\"><span>PHONE: +61 (0) 7 55435553</span><span>EMAIL: abex@abex.com.au</span></div>"
             },
             "elements": [],
             "widgetType": "html"
@@ -403,44 +403,6 @@
           }
         ],
         "isInner": true
-      }
-    ],
-    "isInner": false
-  },
-  {
-    "id": "marq0001",
-    "elType": "container",
-    "settings": {
-      "padding": {
-        "top": "60",
-        "left": "0",
-        "unit": "px",
-        "right": "0",
-        "bottom": "60",
-        "isLinked": false
-      },
-      "css_classes": "abex",
-      "border_color": "#E4E1DA",
-      "border_width": {
-        "top": "0",
-        "left": "0",
-        "unit": "px",
-        "right": "0",
-        "bottom": "1",
-        "isLinked": false
-      },
-      "border_border": "solid",
-      "content_width": "full"
-    },
-    "elements": [
-      {
-        "id": "marqw1",
-        "elType": "widget",
-        "settings": {
-          "html": "<div class=\"abex-marquee\"><div class=\"abex-marquee__track\"><span class=\"abex-marquee__group\">Efficient<i></i>Effective<i></i>Economic<i></i>Business and Project Management Consultants<i></i></span><span class=\"abex-marquee__group\">Efficient<i></i>Effective<i></i>Economic<i></i>Business and Project Management Consultants<i></i></span></div></div>"
-        },
-        "elements": [],
-        "widgetType": "html"
       }
     ],
     "isInner": false
@@ -874,7 +836,7 @@
                 "id": "svctxt1",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>Systems and controls that keep heavy industry projects on cost, time and quality.</p>",
+                  "editor": "<p>Systems and controls that track projects on cost, time and quality.</p>",
                   "text_color": "#D5D8F0",
                   "_css_classes": "abex-small"
                 },
@@ -931,7 +893,7 @@
                 "id": "svcimg2",
                 "elType": "widget",
                 "settings": {
-                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-construction-planning.jpg\" alt=\"Construction planning and scheduling\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
+                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-construction-planning.jpg\" alt=\"Project planning and scheduling\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
                   "_element_custom_width": {
                     "size": 100,
                     "unit": "%"
@@ -945,7 +907,7 @@
                 "id": "svcttl2",
                 "elType": "widget",
                 "settings": {
-                  "title": "Construction planning and scheduling",
+                  "title": "Project planning and scheduling",
                   "header_size": "h3",
                   "title_color": "#FFFFFF",
                   "_css_classes": "abex-h3"
@@ -1014,7 +976,7 @@
                 "id": "svcimg3",
                 "elType": "widget",
                 "settings": {
-                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-contracts-claims.jpg\" alt=\"Contracts and claims management\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
+                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-contracts-claims.jpg\" alt=\"Contracts Management\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
                   "_element_custom_width": {
                     "size": 100,
                     "unit": "%"
@@ -1028,7 +990,7 @@
                 "id": "svcttl3",
                 "elType": "widget",
                 "settings": {
-                  "title": "Contracts and claims management",
+                  "title": "Contracts Management",
                   "header_size": "h3",
                   "title_color": "#FFFFFF",
                   "_css_classes": "abex-h3"
@@ -1206,7 +1168,7 @@
                 "id": "clih2",
                 "elType": "widget",
                 "settings": {
-                  "title": "Heavy industry is where we work",
+                  "title": "Where we work",
                   "header_size": "h2",
                   "title_color": "#12152E",
                   "_css_classes": "abex-h2"
@@ -1221,7 +1183,7 @@
             "id": "clihr",
             "elType": "widget",
             "settings": {
-              "editor": "<p>Examples where we have worked include mines/mining, minerals processing, energy generation and transmission, water supply and reticulation.</p>",
+              "editor": "<p>Examples include mines/mining, minerals processing, energy generation and transmission, water supply and reticulation.</p>",
               "_css_classes": "abex-body",
               "_element_width": "initial",
               "_element_custom_width": {
@@ -1523,7 +1485,7 @@
         "id": "stab",
         "elType": "widget",
         "settings": {
-          "html": "<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:28px\"><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">40<em>+</em></span><span style=\"font-size:14px\">Years experience</span></div></div><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">9</span><span style=\"font-size:14px\">Client sectors</span></div></div><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">QLD</span><span style=\"font-size:14px\">Based in Queensland</span></div></div></div>",
+          "html": "<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:28px\"><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">40<em>+</em></span><span style=\"font-size:14px\">Years experience</span></div></div><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">9</span><span style=\"font-size:14px\">Industry sectors</span></div></div><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">QLD</span><span style=\"font-size:14px\">Based in Queensland</span></div></div></div>",
           "_element_width": "initial",
           "_element_custom_width": {
             "size": 74,
@@ -1762,7 +1724,7 @@
                 "id": "pnl1p",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>Our business model is to provide the management required to deliver successful and sustainable outcomes for our clients. Using this model, our activities encompass:</p>",
+                  "editor": "<p>Our business model is to provide the management required to deliver successful and sustainable outcomes for our clients, and to add value by drawing on our experience and expertise. Using this model, our activities encompass:</p>",
                   "_css_classes": "abex-small"
                 },
                 "elements": [],
@@ -1784,7 +1746,7 @@
             "id": "pnl1img",
             "elType": "widget",
             "settings": {
-              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-transmission-towers.jpg\" alt=\"Transmission towers\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Successful and sustainable outcomes</span></div>",
+              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-solar-farm.jpg\" alt=\"Aerial view of a solar farm\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Successful and sustainable outcomes</span></div>",
               "_element_width": "initial",
               "_element_custom_width": {
                 "size": 44,
@@ -2018,7 +1980,7 @@
                 "id": "pnl3p",
                 "elType": "widget",
                 "settings": {
-                  "editor": "<p>Our services range from specific short-term assignments through to long-term and extensive provision of resources and teams.</p>",
+                  "editor": "<p>Our services range from specific short-term assignments through to longer-term provision of resources and client-embedded or external teams.</p>",
                   "_css_classes": "abex-small"
                 },
                 "elements": [],
@@ -2028,7 +1990,7 @@
                 "id": "pnl3met",
                 "elType": "widget",
                 "settings": {
-                  "html": "<div style=\"display:grid;gap:18px;padding:6px 0;width:100%\"><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Specific short-term assignments</span><span>Weeks</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:34%\"></div></div></div><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Long-term provision of resources</span><span>Months</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:68%\"></div></div></div><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Extensive provision of teams</span><span>Years</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:100%\"></div></div></div></div><p style=\"margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:500;font-size:17px;line-height:1.5;border-left:3px solid #E63A2E;padding-left:16px\">&ldquo;Our objective is to deliver quality services utilising the appropriate resources and tools.&rdquo;</p>"
+                  "html": "<div style=\"display:grid;gap:18px;padding:6px 0;width:100%\"><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Specific short-term assignments</span><span>Weeks</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:34%\"></div></div></div><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Longer-term provision of resources</span><span>Months</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:68%\"></div></div></div><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Client-embedded or external teams</span><span>Years</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:100%\"></div></div></div></div><p style=\"margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:500;font-size:17px;line-height:1.5;border-left:3px solid #E63A2E;padding-left:16px\">&ldquo;Our objective is to deliver quality services utilising the appropriate resources and tools.&rdquo;</p>"
                 },
                 "elements": [],
                 "widgetType": "html"
@@ -2055,7 +2017,7 @@
             "id": "pnl3img",
             "elType": "widget",
             "settings": {
-              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-mining-truck.jpg\" alt=\"Mining truck in an open-pit mine\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Short-term to long-term</span></div>",
+              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-mining-truck.jpg\" alt=\"Mining truck in an open-pit mine\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Short-term to longer-term</span></div>",
               "_element_width": "initial",
               "_element_custom_width": {
                 "size": 44,
@@ -2122,8 +2084,8 @@
           "content_width": "full",
           "background_size": "cover",
           "background_image": {
-            "id": 25,
-            "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/contact-industrial-port.jpg"
+            "id": 199,
+            "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/contact-boardroom-briefing.jpg"
           },
           "background_position": "center center",
           "background_background": "classic",
@@ -2182,6 +2144,44 @@
           }
         ],
         "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "marq0001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "60",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "60",
+        "isLinked": false
+      },
+      "css_classes": "abex",
+      "border_color": "#E4E1DA",
+      "border_width": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "1",
+        "isLinked": false
+      },
+      "border_border": "solid",
+      "content_width": "full"
+    },
+    "elements": [
+      {
+        "id": "marqw1",
+        "elType": "widget",
+        "settings": {
+          "html": "<div class=\"abex-marquee\"><div class=\"abex-marquee__track\"><span class=\"abex-marquee__group\">Efficient<i></i>Effective<i></i>Economic<i></i>Project and Business Management Consultants<i></i></span><span class=\"abex-marquee__group\">Efficient<i></i>Effective<i></i>Economic<i></i>Project and Business Management Consultants<i></i></span></div></div>"
+        },
+        "elements": [],
+        "widgetType": "html"
       }
     ],
     "isInner": false
