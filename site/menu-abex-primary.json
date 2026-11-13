@@ -1,0 +1,42 @@
+{
+  "id": 2,
+  "name": "ABEX Primary",
+  "slug": "abex-primary",
+  "locations": [
+    "abex_primary",
+    "menu-1"
+  ],
+  "items": [
+    {
+      "order": 1,
+      "label": "Home",
+      "type": "page",
+      "object_id": 27,
+      "url": "/"
+    },
+    {
+      "order": 2,
+      "label": "About Us",
+      "type": "custom",
+      "url": "#"
+    },
+    {
+      "order": 3,
+      "label": "Services",
+      "type": "custom",
+      "url": "#"
+    },
+    {
+      "order": 4,
+      "label": "Clients",
+      "type": "custom",
+      "url": "#"
+    },
+    {
+      "order": 5,
+      "label": "Contact Us",
+      "type": "custom",
+      "url": "#"
+    }
+  ]
+}

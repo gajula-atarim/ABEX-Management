@@ -1,0 +1,129 @@
+[
+  {
+    "id": "hdr00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "0",
+        "isLinked": true
+      },
+      "css_classes": "abex abex-header",
+      "border_color": "#E4E1DA",
+      "border_width": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "1",
+        "isLinked": false
+      },
+      "border_border": "solid",
+      "content_width": "full",
+      "background_color": "#FFFFFF",
+      "background_background": "classic"
+    },
+    "elements": [
+      {
+        "id": "hdrin001",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "14",
+            "left": "48",
+            "unit": "px",
+            "right": "48",
+            "bottom": "14",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "row": "12",
+            "size": 28,
+            "unit": "px",
+            "column": "28"
+          },
+          "flex_wrap": "wrap",
+          "boxed_width": {
+            "size": 1320,
+            "unit": "px"
+          },
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_align_items": "center",
+          "flex_justify_content": "space-between",
+          "padding_mobile": {
+            "bottom": "12",
+            "isLinked": false,
+            "left": "20",
+            "right": "20",
+            "top": "12",
+            "unit": "px"
+          },
+          "padding_tablet": {
+            "bottom": "14",
+            "isLinked": false,
+            "left": "28",
+            "right": "28",
+            "top": "14",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "00f6883",
+            "elType": "widget",
+            "settings": {
+              "html": "<a href=\"/\" style=\"display:block\" aria-label=\"ABEX Management Services — home\"><span class=\"abex-logo abex-logo--hdr\" role=\"img\" aria-label=\"ABEX Management Services\"></span></a>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "hdrnav0",
+            "elType": "widget",
+            "settings": {
+              "menu": "abex-primary",
+              "layout": "horizontal",
+              "dropdown": "tablet",
+              "_css_classes": "abex-nav",
+              "submenu_icon": "arrow",
+              "navmenu_align": "right",
+              "padding_vertical_menu_item": {
+                "size": 4,
+                "unit": "px",
+                "sizes": []
+              },
+              "padding_horizontal_menu_item": {
+                "size": 15,
+                "unit": "px",
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "navigation-menu"
+          },
+          {
+            "id": "hdrcta0",
+            "elType": "widget",
+            "settings": {
+              "link": {
+                "url": "#contact",
+                "nofollow": "",
+                "is_external": ""
+              },
+              "text": "Get in touch",
+              "_css_classes": "abex-btn"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  }
+]

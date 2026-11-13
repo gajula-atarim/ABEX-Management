@@ -1,0 +1,29 @@
+{
+  "blogname": "ABEX Management Services",
+  "blogdescription": "",
+  "show_on_front": "page",
+  "page_on_front": 27,
+  "page_for_posts": 0,
+  "search_engine_visible": false,
+  "site_icon": 146,
+  "active_theme": "abex",
+  "parent_theme": "hello-elementor 3.5.2",
+  "plugins": {
+    "elementor": "4.3.6",
+    "header-footer-elementor (UAE)": "2.9.6",
+    "atarim-visual-collaboration": "5.1.9"
+  },
+  "pages": {
+    "27": "Home (front page, Elementor)",
+    "28": "About Us (published, empty)",
+    "29": "Services (published, empty)",
+    "30": "Clients (published, empty)",
+    "31": "Contact Us (published, empty)",
+    "2": "Sample Page (WP default, published)",
+    "3": "Privacy Policy (draft)"
+  },
+  "elementor_hf": {
+    "37": "ABEX Header",
+    "38": "ABEX Footer"
+  }
+}

@@ -1,0 +1,1917 @@
+@import url("/wp-content/themes/abex/assets/abex-logo.css?v=1");
+
+/* ABEX build — iteration layer. Folded back into assets/abex.css at handover. */
+
+.abex-h2 .elementor-heading-title, .abex-h2 { color: var(--abex-ink); }
+.abex-h3 .elementor-heading-title, .abex-h3 { color: var(--abex-ink); }
+
+/* Hero scrim. Elementor already owns .e-con::before for its own background
+   overlay, so this uses ::after and matches .e-con for specificity. */
+.e-con.abex-hero { position: relative; }
+.e-con.abex-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(11,16,80,.92) 0%, rgba(11,16,80,.78) 40%, rgba(11,16,80,.15) 75%);
+}
+.e-con.abex-hero > * { position: relative; z-index: 2; }
+
+/* Vertical contact rail. */
+.abex-rail { display: block; flex: 0 0 62px; width: 62px; padding: 24px 12px; }
+.abex-rail .elementor-widget-container { height: 100%; }
+.abex-rail__in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 100%;
+  min-height: 420px;
+}
+.abex-rail a { white-space: nowrap; }
+
+/* The sweep button also has to work on a bare <button> inside the enquiry form. */
+button.abex-btn {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 8px 8px 8px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(90deg, var(--abex-navy-deep) 50%, var(--abex-red-deep) 50%);
+  background-size: 202% 100%;
+  background-position: 100% 0;
+  transition: background-position .45s cubic-bezier(.6,0,.2,1), gap .3s ease;
+}
+button.abex-btn:hover, button.abex-btn:focus-visible { background-position: 0 0; gap: 22px; }
+button.abex-btn::after {
+  content: "\2192";
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--abex-red-deep);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+/* Testimonial pull-quote sits a step below the section quote. */
+.abex-quote--sm .elementor-heading-title,
+.abex-quote--sm { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35; }
+
+/* The logo rules used to live here. Additional CSS clips a value as long as an
+   embedded image, which left background-image invalid and the mark invisible,
+   so they now sit in assets/abex-logo.css, imported above. */
+
+/* ==================================================================
+   Corrections against ABEX_Home_v3.dc.html
+
+   These carry !important because Elementor emits its own per-element
+   rules at (0,4,0) from the widget settings, which outrank anything
+   written here. Folding them into the widget settings themselves is
+   the handover job; until then this is what makes them stick.
+   ================================================================== */
+
+/* Hero. The design holds the headline to 720px and the lead to 540px so both
+   stay over the dark left end of the scrim; without it the copy ran the full
+   width and crossed into the bright part of the photo. */
+.elementor-element-heroh1 { max-width: 720px !important; }
+.elementor-element-herolead { max-width: 540px !important; }
+
+/* Hero pill is the glass variant in the design: white on a translucent chip. */
+.elementor-element-heropill .elementor-heading-title {
+  background: rgba(255, 255, 255, .14) !important;
+  border-color: rgba(255, 255, 255, .35) !important;
+  color: #fff !important;
+}
+
+/* Quiet text link, as under each value column. Elementor renders a button
+   widget, so the button chrome has to come off. */
+.abex-link .elementor-button,
+a.abex-link {
+  background: none !important;
+  background-image: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  color: var(--abex-ink) !important;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+.abex-link .elementor-button:hover,
+.abex-link .elementor-button:focus-visible,
+a.abex-link:hover {
+  color: var(--abex-red-deep) !important;
+  background: none !important;
+}
+
+/* Services band. The navy starts 140px down the section, so the service cards
+   break across the bone-to-navy edge instead of sitting wholly inside it. */
+.elementor-element-svcband0 {
+  background: linear-gradient(#FBFAF7 0, #FBFAF7 140px, #141B7A 140px) !important;
+}
+
+/* Service cards share a height so the three Read more buttons sit on one
+   baseline. Elementor wraps a boxed container's children in .e-con-inner, so
+   both levels have to stretch. */
+.elementor-element-svcrow0,
+.elementor-element-svcrow0 > .e-con-inner { align-items: stretch !important; }
+.elementor-element-svccard1,
+.elementor-element-svccard2,
+.elementor-element-svccard3,
+.elementor-element-svccard1 > .e-con-inner,
+.elementor-element-svccard2 > .e-con-inner,
+.elementor-element-svccard3 > .e-con-inner { height: 100% !important; }
+.elementor-element-svcbtn1,
+.elementor-element-svcbtn2,
+.elementor-element-svcbtn3 { margin-top: auto !important; }
+
+/* Contact. The design is a two-column auto-fit grid: a full-height photo beside
+   the form. It was stacking, which left the photo as a short strip on top. The
+   460px basis reproduces the design's minmax(min(100%,460px),1fr) wrap point. */
+.elementor-element-con00001,
+.elementor-element-con00001 > .e-con-inner {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+}
+.elementor-element-conimg {
+  flex: 1 1 460px !important;
+  align-self: stretch !important;
+  min-height: 420px !important;
+}
+.elementor-element-confrm { flex: 1 1 460px !important; }
+
+/* Enquiry form. */
+.abex-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.abex-form { width: 100%; max-width: 640px; display: grid; gap: 26px; }
+.abex-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 22px 28px;
+}
+.abex-form__grid > label { display: grid; gap: 4px; }
+.abex-form__full { grid-column: 1 / -1; }
+.abex-form button.abex-btn { justify-self: start; }
+.abex-form__notice {
+  padding: 14px 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--abex-sand);
+}
+.abex-form__notice--ok { border-left: 3px solid var(--abex-navy); }
+.abex-form__notice--err { border-left: 3px solid var(--abex-red-deep); }
+
+
+/* The hero row must not wrap. In the design the contact rail sits beside the
+   hero at every width, but Elementor wraps container children on small
+   screens, which pushed the rail onto its own 420px line and left a blank
+   band above the hero on phones. */
+.elementor-element-hero0001,
+.elementor-element-hero0001 > .e-con-inner { flex-wrap: nowrap !important; }
+.elementor-element-herobody { min-width: 0 !important; }
+
+
+/* Hero padding is fluid in the design — clamp(64px, 9vw, 112px) vertical and
+   clamp(20px, 4vw, 48px) horizontal. It was pinned at 112/48, which on a phone
+   cost the headline most of its measure and pushed it to an extra line. */
+.elementor-element-herobody {
+  padding-top: clamp(64px, 9vw, 112px) !important;
+  padding-bottom: clamp(64px, 9vw, 112px) !important;
+  padding-left: clamp(20px, 4vw, 48px) !important;
+  padding-right: clamp(20px, 4vw, 48px) !important;
+}
+
+
+/* ==================================================================
+   Phones (<= 767px)
+   ================================================================== */
+@media (max-width: 767px) {
+
+  /* Header: logo and hamburger on one row, no CTA. The button duplicates the
+     Contact Us item in the menu behind the hamburger, and at 320px the three
+     of them stacked into three rows. */
+  .elementor-element-hdrin001,
+  .elementor-element-hdrin001 > .e-con-inner {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+  }
+  .elementor-element-hdrin001 .elementor-widget-html,
+  .elementor-element-hdrnav0 {
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+  }
+  .elementor-element-hdrcta0 { display: none !important; }
+
+  /* Hero: the contact rail lifts out of the flow and sits over the slider, so
+     the images run the full width of the screen behind it. The scrim is at its
+     heaviest down that edge, so the rail reverses to white and stays legible. */
+  .elementor-element-hero0001 { position: relative; }
+  .elementor-element-herorail {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 62px !important;
+    z-index: 4 !important;
+    background: transparent !important;
+    pointer-events: none;
+  }
+  .elementor-element-herorail a { pointer-events: auto; }
+  .abex-rail a { color: #fff !important; }
+  .abex-rail__in > span { background: rgba(255, 255, 255, .45) !important; }
+
+  /* Hero copy clears the overlaid rail. */
+  .elementor-element-herobody {
+    padding-left: 78px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Small phones: the rail narrows so the headline keeps a usable measure. */
+@media (max-width: 400px) {
+  .elementor-element-herorail { width: 46px !important; }
+  .abex-rail { padding: 24px 6px !important; }
+  .abex-rail a { font-size: 12px; }
+  .elementor-element-herobody { padding-left: 58px !important; }
+}
+
+
+@media (max-width: 767px) {
+
+  /* The menu widget still carries the full horizontal list at its intrinsic
+     width, so pinned at flex:0 0 auto it pushed the hamburger off the right
+     edge below ~430px. Let it shrink to nothing and park the toggle at the end. */
+  .elementor-element-hdrnav0 {
+    flex: 1 1 0% !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+  .elementor-element-hdrnav0 > .elementor-widget-container {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+  .elementor-element-hdrin001,
+  .elementor-element-hdrin001 > .e-con-inner { overflow: visible !important; }
+
+  /* The hero scrim runs left-to-right, which reads on a 1440px hero but leaves
+     the lead copy over the bright end of the photo on a phone. On narrow
+     screens it flattens out, matching how the hero reads in the mobile design. */
+  .e-con.abex-hero::after {
+    background: linear-gradient(90deg, rgba(11,16,80,.94) 0%, rgba(11,16,80,.86) 55%, rgba(11,16,80,.72) 100%) !important;
+  }
+}
+
+
+/* ==================================================================
+   Motion that was specified in the design but never wired up
+   ================================================================== */
+
+/* "How We Work" — the three panels pin and stack. assets/abex.css already had
+   the sticky rules, but they were written as `.abex-stack > .abex-panel` and
+   pnlstack is a boxed container, so Elementor's .e-con-inner sat in between and
+   the selector never matched. Scale and dim come from assets/abex.js. */
+@media (min-width: 1025px) {
+  .abex-stack > .e-con-inner { display: block !important; }
+  .abex-stack > .e-con-inner > .abex-panel {
+    position: sticky !important;
+    top: 100px;
+    margin-bottom: 80px;
+    transform-origin: center top;
+    transform: scale(var(--abex-s, 1));
+    transition: transform .15s linear;
+    will-change: transform;
+  }
+  .abex-stack > .e-con-inner > .abex-panel:nth-of-type(1) { z-index: 1; }
+  .abex-stack > .e-con-inner > .abex-panel:nth-of-type(2) { z-index: 2; }
+  .abex-stack > .e-con-inner > .abex-panel:nth-of-type(3) { z-index: 3; margin-bottom: 0; }
+
+  /* The panel underneath darkens as the next one covers it. */
+  .abex-stack > .e-con-inner > .abex-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+    background: #070B3A;
+    opacity: var(--abex-dim, 0);
+    pointer-events: none;
+    transition: opacity .15s linear;
+  }
+}
+
+/* Service cards. Hovering the card wipes a red-to-navy gradient in from the
+   right, eases the photo up and underlines the title. */
+.elementor-element-svcimg1 .abex-zoom::after,
+.elementor-element-svcimg2 .abex-zoom::after,
+.elementor-element-svcimg3 .abex-zoom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, rgba(230,58,46,.55), rgba(20,27,122,.65));
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: transform .55s cubic-bezier(.6,0,.2,1);
+  pointer-events: none;
+}
+.elementor-element-svccard1:hover .abex-zoom::after,
+.elementor-element-svccard2:hover .abex-zoom::after,
+.elementor-element-svccard3:hover .abex-zoom::after { transform: scaleX(1); }
+
+.elementor-element-svccard1 .abex-zoom img,
+.elementor-element-svccard2 .abex-zoom img,
+.elementor-element-svccard3 .abex-zoom img {
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.elementor-element-svccard1:hover .abex-zoom img,
+.elementor-element-svccard2:hover .abex-zoom img,
+.elementor-element-svccard3:hover .abex-zoom img { transform: scale(1.06); }
+
+.elementor-element-svccard1 .elementor-heading-title,
+.elementor-element-svccard2 .elementor-heading-title,
+.elementor-element-svccard3 .elementor-heading-title {
+  text-decoration-color: transparent;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color .3s ease;
+}
+.elementor-element-svccard1:hover .elementor-heading-title,
+.elementor-element-svccard2:hover .elementor-heading-title,
+.elementor-element-svccard3:hover .elementor-heading-title {
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+}
+
+/* Clientele cards lift their photo on hover, like the service cards. */
+.abex-sector img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.abex-sector:hover img { transform: scale(1.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  .abex-stack > .e-con-inner > .abex-panel {
+    position: relative !important;
+    transform: none !important;
+  }
+  .abex-stack > .e-con-inner > .abex-panel::after { opacity: 0 !important; }
+  .abex-sector img,
+  .elementor-element-svccard1 .abex-zoom img,
+  .elementor-element-svccard2 .abex-zoom img,
+  .elementor-element-svccard3 .abex-zoom img { transition: none; }
+}
+
+
+/* Footer columns. They were sized 28% + 18% + 24% + 22% = 92% on a wrapping
+   flex row, and the three 32px gaps push that past what the row can hold, so
+   the "Get In Touch" column dropped to its own line as soon as the window came
+   off 1440. The design lays this out as a grid instead — 1.3fr then three equal
+   columns above 900px, two columns above 560, one below — so this does the same
+   and lets the columns size themselves. */
+.elementor-element-ftrin001 > .e-con-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px 32px;
+  align-items: start;
+}
+.elementor-element-ftrc1,
+.elementor-element-ftrc2,
+.elementor-element-ftrc3,
+.elementor-element-ftrc4 { width: auto !important; }
+
+@media (min-width: 561px) {
+  .elementor-element-ftrin001 > .e-con-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 901px) {
+  .elementor-element-ftrin001 > .e-con-inner {
+    grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   Baselines across the service cards and the About Us value columns.
+
+   Two separate jobs. Reserving two lines for the card titles makes every
+   description start on the same line; letting the description grow pushes
+   every button down to a shared baseline, which margin-top alone could not do
+   once a row wrapped to two columns.
+   ------------------------------------------------------------------ */
+
+@media (min-width: 768px) {
+  .elementor-element-svcttl1 .elementor-heading-title,
+  .elementor-element-svcttl2 .elementor-heading-title,
+  .elementor-element-svcttl3 .elementor-heading-title { min-height: 2.6em; }
+}
+
+.elementor-element-svccard1,
+.elementor-element-svccard2,
+.elementor-element-svccard3,
+.elementor-element-svccard1 > .e-con-inner,
+.elementor-element-svccard2 > .e-con-inner,
+.elementor-element-svccard3 > .e-con-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.elementor-element-svctxt1,
+.elementor-element-svctxt2,
+.elementor-element-svctxt3 { flex-grow: 1 !important; }
+
+/* About Us value columns: three "Learn more" links on one baseline. */
+.elementor-element-val00001,
+.elementor-element-val00001 > .e-con-inner { align-items: stretch !important; }
+.elementor-element-valc1,
+.elementor-element-valc2,
+.elementor-element-valc3,
+.elementor-element-valc1 > .e-con-inner,
+.elementor-element-valc2 > .e-con-inner,
+.elementor-element-valc3 > .e-con-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.elementor-element-valc1t,
+.elementor-element-valc2t,
+.elementor-element-valc3t { flex-grow: 1 !important; }
+.elementor-element-feb3539,
+.elementor-element-27e73ae,
+.elementor-element-6fa78fa { margin-top: auto !important; }
+
+
+/* The cards and columns were still sizing to their own content, so flex-grow on
+   the description had no slack to take up and the shortest card kept its button
+   12px high. align-items on the row loses to Elementor's per-item align-self,
+   so each one is stretched directly. */
+.elementor-element-svccard1,
+.elementor-element-svccard2,
+.elementor-element-svccard3,
+.elementor-element-valc1,
+.elementor-element-valc2,
+.elementor-element-valc3 { align-self: stretch !important; }
+
+
+/* height: 100% on the cards above was self-defeating: their parent has no
+   definite height, so the percentage resolved to auto and the card fell back to
+   its own content height, undoing align-self: stretch. The stretch alone gives
+   the card a definite height, which is what lets the inner wrapper fill it and
+   the description grow. */
+.elementor-element-svccard1,
+.elementor-element-svccard2,
+.elementor-element-svccard3,
+.elementor-element-valc1,
+.elementor-element-valc2,
+.elementor-element-valc3 { height: auto !important; }
+
+.elementor-element-svccard1 > .e-con-inner,
+.elementor-element-svccard2 > .e-con-inner,
+.elementor-element-svccard3 > .e-con-inner,
+.elementor-element-valc1 > .e-con-inner,
+.elementor-element-valc2 > .e-con-inner,
+.elementor-element-valc3 > .e-con-inner {
+  flex-grow: 1 !important;
+  height: auto !important;
+}
+
+
+/* "How we want our clients to see us": the intro paragraph and the pull-quote
+   below it start on the same line in the design. The header row splits 48% with
+   a 64px gap, but the body row was 36% with a 72px gap, so the quote column
+   began further left than the paragraph above it.
+
+   The body row now takes the header's 48% + 64px, and the photo is held to 75%
+   of that column, which is the 36% it already occupied — so only the quote
+   column moves. */
+@media (min-width: 1025px) {
+  .elementor-element-tstbody {
+    display: grid !important;
+    grid-template-columns: 48% minmax(0, 1fr) !important;
+    column-gap: 64px !important;
+    align-items: center !important;
+  }
+  .elementor-element-tstimg {
+    width: 100% !important;
+    max-width: 75% !important;
+  }
+  .elementor-element-tstcol { width: auto !important; }
+}
+
+
+/* Hero headline sizing. At clamp(40px, 5.8vw, 78px) the headline ran to four
+   lines and pushed the hero to 813px — 887px with the header — so the foot of
+   the slider and its dots fell below the fold on a 1440x900 desktop. Dropping
+   the cap to 58px brings the copy back inside the hero's 680px minimum, and
+   the min-height is itself capped to the viewport so the whole slider is
+   visible on shorter screens too. */
+@media (min-width: 1025px) {
+  .elementor-element-heroh1,
+  .elementor-element-heroh1 .elementor-heading-title {
+    font-size: clamp(34px, 4.2vw, 58px) !important;
+  }
+  .elementor-element-herobody {
+    min-height: min(680px, calc(100vh - 76px)) !important;
+  }
+}
+
+
+/* Capping the hero's min-height is not enough on a short screen: the content
+   plus 112px of padding top and bottom still overflowed it, so on a 1366x640
+   viewport the button sat on the fold. The vertical padding now answers to the
+   viewport height as well as its width, which keeps the whole slider — dots and
+   red underbar included — on screen. Horizontal padding is unchanged. */
+@media (min-width: 1025px) {
+  .elementor-element-herobody {
+    padding-top: clamp(36px, min(9vw, 7vh), 112px) !important;
+    padding-bottom: clamp(36px, min(9vw, 7vh), 112px) !important;
+  }
+}
+
+
+/* A little more weight back in the hero headline. 66px is the most it can take
+   while "Better performance" still holds one line inside the 720px measure
+   (it needs about 9.9x the font size, so 72px is the breaking point) and the
+   hero stays inside the viewport cap set above. */
+@media (min-width: 1025px) {
+  .elementor-element-heroh1,
+  .elementor-element-heroh1 .elementor-heading-title {
+    font-size: clamp(36px, 4.7vw, 66px) !important;
+  }
+}
+
+
+/* The faint curved line-work behind each How We Work panel. assets/abex.css
+   already styles .abex-panel__lines, but the artwork itself was never placed.
+   The widget that carries it has to come out of the panel's flex flow, or it
+   would claim a column and a gap of its own. */
+.abex-panel__lineswrap {
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none;
+}
+.abex-panel__lineswrap > .elementor-widget-container {
+  position: absolute;
+  inset: 0;
+}
+.abex-panel > .e-con,
+.abex-panel > .elementor-widget:not(.abex-panel__lineswrap) {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* How We Work panels: the activities list and the numbered rings run in two
+   columns in the design, but were stacking into one. Their text column is set
+   to align-items: flex-start, so each widget shrank to its own content width
+   and the auto-fit grids inside never saw room for a second column. Giving them
+   the full column width lets both fall into two, which also brings the panels
+   back to the design's height. */
+.elementor-element-pnl1list,
+.elementor-element-pnl2rings,
+.elementor-element-pnl3met,
+.elementor-element-pnl1p,
+.elementor-element-pnl2p,
+.elementor-element-pnl3p {
+  width: 100% !important;
+  max-width: none !important;
+  align-self: stretch !important;
+}
+
+
+/* No underline on the service card titles on hover. The design underlines them,
+   but the wipe and the photo zoom already carry the hover, and the rule sat
+   awkwardly under a two-line title. */
+.elementor-element-svccard1:hover .elementor-heading-title,
+.elementor-element-svccard2:hover .elementor-heading-title,
+.elementor-element-svccard3:hover .elementor-heading-title {
+  text-decoration-line: none !important;
+  text-decoration-color: transparent !important;
+}
+
+
+/* Clientele cards. Each card is an <a>, so the theme's link colour was beating
+   .abex-sector { color: #fff } and tinting the number badge and the title blue
+   — against a photo that is often blue itself. White now wins, on hover and
+   focus as well as at rest. */
+.abex-sector,
+.abex-sector:link,
+.abex-sector:visited,
+.abex-sector:hover,
+.abex-sector:focus,
+.abex-sector:focus-visible,
+.abex-sector strong,
+.abex-sector:hover strong { color: #fff !important; }
+
+/* The badge sits over whatever the photo happens to be — a pale pipe run on one
+   card, open sky on the next — so it carries its own scrim rather than relying
+   on the picture behind it. */
+.abex-sector > span:first-of-type {
+  background: rgba(11, 16, 80, .38);
+  border-color: rgba(255, 255, 255, .65) !important;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+
+/* Footer skyline — the faint vertical bars at the bottom left. assets/abex.css
+   positions .abex-skyline absolutely at bottom: 64px, but the footer container
+   was never made a positioning context, so it had nothing to anchor to and the
+   bars ended up nowhere. Same shape of fault as the panel line-work: the widget
+   itself also has to leave the footer's flow so it does not claim a row. */
+.elementor-element-ftr00001 { position: relative; }
+.elementor-element-ftrsky0 {
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none;
+}
+.elementor-element-ftrsky0 > .elementor-widget-container {
+  position: absolute;
+  inset: 0;
+}
+.elementor-element-ftrin001,
+.elementor-element-ftrbar0 {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Larger primary navigation on desktop. The design file sets these at 15px/500;
+   17px is a deliberate step up from it, with a little more room between items
+   so the row does not crowd. Below 1025px the menu is behind the hamburger, so
+   this is desktop only. */
+@media (min-width: 1025px) {
+  .elementor-element-hdrnav0 .hfe-nav-menu a.hfe-menu-item,
+  .elementor-element-hdrnav0 .hfe-nav-menu a.hfe-sub-menu-item,
+  .elementor-element-hdrnav0 .menu-item > a {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu > li.menu-item { margin-inline: 2px; }
+}
+
+
+/* Mobile header: logo hard left, hamburger hard right. The row was already
+   space-between, but the boxed container kept a wide gutter on each side, so
+   both sat well inside the screen edges. 20px matches the hero's mobile
+   gutter. */
+@media (max-width: 767px) {
+  .elementor-element-hdrin001,
+  .elementor-element-hdrin001 > .e-con-inner {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .elementor-element-hdrin001 .elementor-widget-html { margin-left: 0 !important; }
+  .elementor-element-hdrnav0 > .elementor-widget-container {
+    justify-content: flex-end !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+/* Mobile header, second pass. The padding above did not take: Elementor feeds
+   container padding through --padding-inline-* custom properties and applies
+   them as logical properties, which outrank a plain padding-left no matter how
+   many !importants it carries. Setting the properties themselves works. The
+   hamburger also needed pushing: UAE centres its toggle inside the menu widget
+   rather than honouring the widget's own right alignment. */
+@media (max-width: 767px) {
+  .elementor-element-hdrin001 {
+    --padding-inline-start: 20px;
+    --padding-inline-end: 20px;
+    --content-width: 100%;
+  }
+
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon,
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu-wrapper,
+  .elementor-element-hdrnav0 .hfe-nav-menu__layout-horizontal {
+    justify-content: flex-end !important;
+  }
+  .elementor-element-hdrnav0 > .elementor-widget-container { text-align: right !important; }
+}
+
+
+/* The custom properties above needed !important too — Elementor declares
+   --padding-inline-start: 48px on the same element at higher specificity. */
+@media (max-width: 767px) {
+  .elementor-element-hdrin001 {
+    --padding-inline-start: 20px !important;
+    --padding-inline-end: 20px !important;
+  }
+}
+
+
+/* Header gutter, final. Elementor writes this container's padding as a
+   shorthand at .elementor-37 .elementor-element.elementor-element-hdrin001,
+   and the header template's stylesheet is printed in the body (the header
+   renders on wp_body_open), after this file. Repeating the id class outranks
+   it outright rather than relying on source order. */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 > .e-con-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+  }
+}
+
+
+/* Push the mobile header all the way into the corners: no side gutter at all,
+   and the hamburger's own glyph bearing trimmed so it sits as close to the
+   right edge as the logo does to the left. */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon,
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle {
+    padding-right: 0 !important;
+    margin-right: -6px !important;
+  }
+  .elementor-element-hdrin001 .elementor-widget-html a { margin-left: -4px; }
+}
+
+
+/* The -6px nudge overshot and clipped the hamburger against the right edge.
+   Back it out and let the 8px gutter stand on its own. */
+@media (max-width: 767px) {
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon,
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle {
+    margin-right: 0 !important;
+  }
+  .elementor-element-hdrin001 .elementor-widget-html a { margin-left: 0; }
+}
+
+
+/* Final mobile header: 3px gap at each corner, logo and hamburger on one
+   centre line.
+
+   Measured against the live render — at an 8px container padding the logo
+   artwork landed 11px in and the hamburger 9px in, so the logo carries 3px of
+   its own transparent bearing and the hamburger 1px. Padding of 0 left and 2
+   right puts both 3px from the edge without either touching it.
+
+   Their centres sat 1.5px apart (45.5 against 44.0) because the toggle keeps
+   its own vertical padding; centring each one in its own box closes that. */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 {
+    padding-left: 0 !important;
+    padding-right: 2px !important;
+    align-items: center !important;
+  }
+
+  .elementor-element-hdrin001 .elementor-widget-html,
+  .elementor-element-hdrnav0 {
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .elementor-element-hdrin001 .elementor-widget-html > .elementor-widget-container,
+  .elementor-element-hdrnav0 > .elementor-widget-container {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .elementor-element-hdrin001 .elementor-widget-html a { display: flex !important; align-items: center !important; }
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon,
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle {
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile, fix 1 of 4: column widths
+
+   Every two-column block on this page sizes its halves with explicit
+   percentages (48%, 44%, 54%, 36%). Elementor keeps a percentage width at
+   every breakpoint unless a per-device value is set, so on a 390px screen
+   those columns render at 170-210px and their contents are crushed: the About
+   images collapse to thumbnails, the clientele intro wraps one word per line,
+   the panel photos become slivers.
+
+   The id class is repeated so this outranks Elementor's own
+   .elementor-27 .elementor-element.elementor-element-X selector outright,
+   rather than depending on which stylesheet is printed last.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-abtimg.elementor-element-abtimg,
+  body .elementor-element.elementor-element-abttxt.elementor-element-abttxt,
+  body .elementor-element.elementor-element-clihl.elementor-element-clihl,
+  body .elementor-element.elementor-element-clihr.elementor-element-clihr,
+  body .elementor-element.elementor-element-tsthl.elementor-element-tsthl,
+  body .elementor-element.elementor-element-tsthr.elementor-element-tsthr,
+  body .elementor-element.elementor-element-tstimg.elementor-element-tstimg,
+  body .elementor-element.elementor-element-tstcol.elementor-element-tstcol,
+  body .elementor-element.elementor-element-stah.elementor-element-stah,
+  body .elementor-element.elementor-element-stab.elementor-element-stab,
+  body .elementor-element.elementor-element-svccard1.elementor-element-svccard1,
+  body .elementor-element.elementor-element-svccard2.elementor-element-svccard2,
+  body .elementor-element.elementor-element-svccard3.elementor-element-svccard3,
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3,
+  body .elementor-element.elementor-element-pnl1txt.elementor-element-pnl1txt,
+  body .elementor-element.elementor-element-pnl1img.elementor-element-pnl1img,
+  body .elementor-element.elementor-element-pnl2txt.elementor-element-pnl2txt,
+  body .elementor-element.elementor-element-pnl2img.elementor-element-pnl2img,
+  body .elementor-element.elementor-element-pnl3txt.elementor-element-pnl3txt,
+  body .elementor-element.elementor-element-pnl3img.elementor-element-pnl3img,
+  body .elementor-element.elementor-element-conimg.elementor-element-conimg,
+  body .elementor-element.elementor-element-confrm.elementor-element-confrm {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* The rows that hold them stack rather than squeeze. */
+  body .elementor-element.elementor-element-abt00001.elementor-element-abt00001,
+  body .elementor-element.elementor-element-clihead.elementor-element-clihead,
+  body .elementor-element.elementor-element-tsthead.elementor-element-tsthead,
+  body .elementor-element.elementor-element-tstbody.elementor-element-tstbody,
+  body .elementor-element.elementor-element-sta00001.elementor-element-sta00001,
+  body .elementor-element.elementor-element-pnl1.elementor-element-pnl1,
+  body .elementor-element.elementor-element-pnl2.elementor-element-pnl2,
+  body .elementor-element.elementor-element-pnl3.elementor-element-pnl3 {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+  }
+
+  /* The testimonial grid override from the desktop fix must not reach here. */
+  body .elementor-element.elementor-element-tstbody.elementor-element-tstbody {
+    display: flex !important;
+    grid-template-columns: none !important;
+  }
+
+  /* The contact photo is a background-image container, so it needs a height of
+     its own once it is no longer sharing a row. */
+  body .elementor-element.elementor-element-conimg.elementor-element-conimg {
+    min-height: 240px !important;
+  }
+
+  /* Panel line-work is decorative; keep it from spilling past the panel. */
+  .abex-panel { overflow: hidden; }
+}
+
+
+/* ==================================================================
+   Mobile, fix 2 of 4: the two faults fix 1 did not reach
+
+   a) The panel photos stayed narrow because Elementor sizes a *widget*
+      through a --width custom property rather than the width property, so
+      the width:100% from fix 1 had nothing to override.
+
+   b) The last clientele card was drawn on top of the testimonial heading.
+      .abex-sector carries aspect-ratio: 3/4, which does not resolve to a
+      height for these grid items on a single-column layout, so the grid
+      reported less height than it drew and the next section started early.
+      A plain min-height is unambiguous. Desktop keeps the 3/4 ratio.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-abtimg.elementor-element-abtimg,
+  body .elementor-element.elementor-element-clihr.elementor-element-clihr,
+  body .elementor-element.elementor-element-tsthr.elementor-element-tsthr,
+  body .elementor-element.elementor-element-tstimg.elementor-element-tstimg,
+  body .elementor-element.elementor-element-stah.elementor-element-stah,
+  body .elementor-element.elementor-element-stab.elementor-element-stab,
+  body .elementor-element.elementor-element-pnl1img.elementor-element-pnl1img,
+  body .elementor-element.elementor-element-pnl2img.elementor-element-pnl2img,
+  body .elementor-element.elementor-element-pnl3img.elementor-element-pnl3img {
+    --width: 100% !important;
+  }
+
+  .abex-sector {
+    aspect-ratio: auto !important;
+    min-height: 420px !important;
+  }
+  body .elementor-element.elementor-element-cligrid.elementor-element-cligrid,
+  body .elementor-element.elementor-element-cligrid.elementor-element-cligrid > .elementor-widget-container {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile, fix 3 of 4: gutters and the About composition
+
+   Every section carries a 48px side gutter, which is the desktop end of the
+   design's clamp(20px, 4vw, 48px). At 390px that clamp resolves to 20px, so
+   the page has been giving away 56px of a 390px screen and squeezing every
+   heading and paragraph. The sections all carry the .abex class.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .e-con.abex.abex,
+  body .elementor-element.elementor-element-confrm.elementor-element-confrm,
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0,
+  body .elementor-element.elementor-element-pnl1.elementor-element-pnl1,
+  body .elementor-element.elementor-element-pnl2.elementor-element-pnl2,
+  body .elementor-element.elementor-element-pnl3.elementor-element-pnl3 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* The header sets its own tighter gutter a few rules above; do not undo it. */
+  body .e-con.abex.abex-header { padding-left: 0 !important; padding-right: 0 !important; }
+
+  /* About: the inset photo was sitting over the "Years operational experience"
+     caption. Narrow the card, hold the caption clear of it. */
+  .elementor-element-abtimg .abex-wipe { padding: 0 8% 24% 0 !important; }
+  .elementor-element-abtimg .abex-wipe > div:last-child { width: 42% !important; }
+  .elementor-element-abtimg .abex-wipe > div:first-child > div:last-child {
+    max-width: 52% !important;
+    line-height: 1.3;
+  }
+
+  /* The value columns' divider rules are a three-column device; stacked they
+     read as stray vertical lines. */
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile, fix 4 of 4: exempt the full-bleed sections
+
+   The 20px gutter in fix 3 was applied to every .abex section, but the hero
+   and the contact block are deliberately full-bleed and carried zero padding.
+   The hero got 20px on top of the 58px it already reserves for the contact
+   rail, which pushed its headline past the right edge at 320px; the contact
+   photo picked up a white margin it should not have.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .e-con.abex.abex-underbar,
+  body .elementor-element.elementor-element-hero0001.elementor-element-hero0001,
+  body .elementor-element.elementor-element-con00001.elementor-element-con00001,
+  body .elementor-element.elementor-element-marq0001.elementor-element-marq0001,
+  body .elementor-element.elementor-element-svcband0.elementor-element-svcband0,
+  body .elementor-element.elementor-element-ban00001.elementor-element-ban00001 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+/* Small phones: the hero headline floors at 40px, and "performance" needs
+   261px at that size while a 320px screen leaves only 242px between the
+   contact rail and the right padding. Scaling with the viewport keeps the
+   longest word inside its measure. */
+@media (max-width: 400px) {
+  .elementor-element-heroh1,
+  .elementor-element-heroh1 .elementor-heading-title {
+    font-size: clamp(30px, 10vw, 40px) !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile: value column alignment and the marquee gap
+
+   The three value columns carry 28px of side padding, which is the breathing
+   room either side of their vertical divider rules on desktop. Stacked, that
+   padding just indents the second and third cards against the first. Zero it
+   so all three share one left edge, and drop the leftover border with it.
+
+   The marquee sits in 60px of padding top and bottom, which on a phone leaves
+   a long empty run between the About Us button and the first word of the
+   marquee. 24px is enough to keep it reading as its own band.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-width: 0 !important;
+  }
+
+  body .elementor-element.elementor-element-marq0001.elementor-element-marq0001 {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  body .elementor-element.elementor-element-abt00001.elementor-element-abt00001 {
+    padding-bottom: 36px !important;
+  }
+}
+
+
+/* The About section carries 120px of padding top and bottom, which is why the
+   run between its button and the marquee stayed long after the marquee's own
+   padding came down. It is a boxed container, so the padding has to be set on
+   the inner wrapper as well as the outer one. 40/32 keeps the section breathing
+   without the dead space. */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-abt00001.elementor-element-abt00001,
+  body .elementor-element.elementor-element-abt00001.elementor-element-abt00001 > .e-con-inner {
+    padding-top: 40px !important;
+    padding-bottom: 32px !important;
+  }
+}
+
+
+/* ==================================================================
+   The marquee band, centred between its neighbours — all widths
+
+   It was sitting 180px below the About section (its 120px bottom padding plus
+   the marquee's own 60px top) and only 60px above the value cards, which have
+   no top padding at all. So it read as belonging to the cards rather than
+   dividing the two. Matching all three gives it equal air on both sides and
+   takes the whole run from 240px to 128px.
+
+   Both levels are set because these are boxed containers and Elementor splits
+   the box between the outer element and its .e-con-inner.
+   ================================================================== */
+body .elementor-element.elementor-element-abt00001.elementor-element-abt00001,
+body .elementor-element.elementor-element-abt00001.elementor-element-abt00001 > .e-con-inner {
+  padding-bottom: 32px !important;
+}
+
+body .elementor-element.elementor-element-marq0001.elementor-element-marq0001 {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+body .elementor-element.elementor-element-val00001.elementor-element-val00001,
+body .elementor-element.elementor-element-val00001.elementor-element-val00001 > .e-con-inner {
+  padding-top: 32px !important;
+}
+
+/* Tighter again on phones, still symmetric. */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-abt00001.elementor-element-abt00001,
+  body .elementor-element.elementor-element-abt00001.elementor-element-abt00001 > .e-con-inner {
+    padding-bottom: 20px !important;
+  }
+  body .elementor-element.elementor-element-marq0001.elementor-element-marq0001 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  body .elementor-element.elementor-element-val00001.elementor-element-val00001,
+  body .elementor-element.elementor-element-val00001.elementor-element-val00001 > .e-con-inner {
+    padding-top: 20px !important;
+  }
+}
+
+
+/* Mobile header: 20px gutter on the right, as asked. The left stays as it was.
+   The hamburger carries 1px of its own bearing, so the measured gap from the
+   screen edge to the glyph comes out at about 21px. */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 {
+    padding-right: 20px !important;
+  }
+}
+
+
+/* ==================================================================
+   Pills: one outline, not two
+
+   assets/abex.css writes the pill as
+
+     .abex-pill .elementor-heading-title,
+     .abex-pill { border: 1px solid; border-radius: 999px; padding: 5px 14px; }
+
+   .abex-pill is the class on the Elementor widget wrapper and
+   .elementor-heading-title is the heading inside it, so the border, radius
+   and padding are drawn twice — one ring nested inside the other. In the
+   design file the pill is a single <span>, so it never showed there.
+
+   The inner element keeps the pill; the wrapper goes back to being a plain
+   box. Covers the navy and glass variants too.
+   ================================================================== */
+.elementor-widget-heading.abex-pill,
+.elementor-widget-heading.abex-pill--onnavy,
+.elementor-widget-heading.abex-pill--glass {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+
+/* ==================================================================
+   Mobile type scale, and the banner plate
+
+   The design system's clamps bottom out at their desktop-ish minimums — h2
+   never goes below 32px, h3 is a flat 21px — so on a 390px screen the
+   headings run large and eat the measure. This takes the whole scale down
+   roughly 15%.
+
+   The banner plate is the same problem seen from the other side: its wrapper
+   keeps the 48px desktop gutter, so at 390px the plate has 294px, the circle
+   and gap take 108, and the heading is left with about 164px — six lines, and
+   a block as tall as it is wide. A 20px gutter plus the smaller heading gives
+   it the design's landscape proportion.
+   ================================================================== */
+@media (max-width: 767px) {
+  .abex-h1 .elementor-heading-title,
+  .abex-h1 { font-size: clamp(28px, 8vw, 34px); }
+
+  .abex-h2 .elementor-heading-title,
+  .abex-h2 { font-size: clamp(23px, 6.6vw, 28px); }
+
+  .abex-h3 .elementor-heading-title,
+  .abex-h3 { font-size: 18px; }
+
+  .abex-quote .elementor-heading-title,
+  .abex-quote { font-size: clamp(19px, 5.4vw, 22px); }
+
+  .abex-lead { font-size: 15px; }
+  .abex-body { font-size: 15px; }
+  .abex-small { font-size: 13.5px; }
+
+  .abex-pill .elementor-heading-title,
+  .abex-pill { font-size: 12px; }
+
+  .abex-marquee__group { font-size: 24px; }
+  .abex-sector strong { font-size: 19px !important; }
+  .abex-ring + span { font-size: 14px !important; }
+
+  /* The hero headline carries its own id-level rule, so it needs setting here
+     or it would stay at its old size while everything around it shrank. */
+  .elementor-element-heroh1,
+  .elementor-element-heroh1 .elementor-heading-title {
+    font-size: clamp(26px, 8vw, 32px) !important;
+  }
+
+  /* Banner plate: gutter and heading. */
+  body .elementor-element.elementor-element-baninner.elementor-element-baninner,
+  body .elementor-element.elementor-element-baninner.elementor-element-baninner > .e-con-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .elementor-element-banplate p { font-size: 19px !important; }
+}
+
+/* The <= 400px hero rule above this one would otherwise win on source order. */
+@media (max-width: 400px) {
+  .elementor-element-heroh1,
+  .elementor-element-heroh1 .elementor-heading-title {
+    font-size: clamp(24px, 7.6vw, 30px) !important;
+  }
+}
+
+
+/* Lighten the mobile hero scrim so more of the slider photograph comes
+   through. It was flattened to .94/.86/.72 earlier to keep the lead copy
+   readable over the bright girders; now that the type has come down a size,
+   .84/.74/.60 still holds the white text while letting the image read. */
+@media (max-width: 767px) {
+  .e-con.abex-hero::after {
+    background: linear-gradient(90deg, rgba(11,16,80,.84) 0%, rgba(11,16,80,.74) 55%, rgba(11,16,80,.60) 100%) !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile: the open menu's close button, and hero image framing
+
+   When the menu opens, UAE re-lays its wrapper and the flex alignment that
+   held the hamburger against the right edge stops applying, so the close
+   button jumps inboard next to the logo. Taking the toggle out of flow and
+   anchoring it to the header row keeps it in exactly the same spot whether
+   the menu is open or closed. The 90px is the measured height of that row,
+   with both the logo and the toggle centred on y=45.
+
+   The hero slides are framed at object-position: 60% centre, which suits a
+   wide hero but crops hard to one side on a phone. Centre reads better.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 {
+    position: relative !important;
+  }
+
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle {
+    position: absolute !important;
+    top: 0 !important;
+    right: 20px !important;
+    height: 90px !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon { margin: 0 !important; }
+
+  .abex-heroslides img { object-position: center center !important; }
+}
+
+
+/* The absolute toggle above anchored to UAE's own menu wrapper, which is
+   positioned, so top:0 resolved against that instead of the header row and
+   the icon dropped to the foot of the header. Making the wrapper chain static
+   hands the containing block back to the header row. */
+@media (max-width: 767px) {
+  .elementor-element-hdrnav0,
+  .elementor-element-hdrnav0 > .elementor-widget-container,
+  .elementor-element-hdrnav0 .hfe-nav-menu-wrapper {
+    position: static !important;
+  }
+}
+
+
+/* ==================================================================
+   Track record: three across on mobile, not stacked
+
+   The grid is repeat(auto-fit, minmax(min(100%, 180px), 1fr)) with a 28px
+   gap, so three tracks need 596px and it drops to a single column well before
+   390. Pinning it to three columns is only half of it — at 56px the numbers
+   would not fit a ~108px column ("QLD" alone is about 118px wide), so the
+   figure, the skewed divider and the labels all come down with it.
+   ================================================================== */
+@media (max-width: 767px) {
+  .elementor-element-stab .elementor-widget-container > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .abex-stat { gap: 10px !important; }
+  .abex-stat::before { height: 48px !important; }
+  .abex-stat__n { font-size: 30px !important; }
+  .abex-stat > div > span:last-child {
+    font-size: 11px !important;
+    line-height: 1.35;
+  }
+}
+
+
+/* The three-column override above missed because it was written against an
+   .elementor-widget-container wrapper, which this Elementor build does not
+   render for HTML widgets — the markup sits directly in the widget. The type
+   scaling landed because those rules key off .abex-stat classes instead.
+   Covering every wrapping the widget might use. */
+@media (max-width: 767px) {
+  .elementor-element-stab > div,
+  .elementor-element-stab > .elementor-widget-container > div,
+  .elementor-element-stab .elementor-widget-container > div,
+  .elementor-element-stab div:has(> .abex-stat) {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+}
+
+
+/* "9" sat 8px below "40+" and "QLD" at 320px. Its label, "Client sectors",
+   fits on one line while "Years experience" and "Based in Queensland" wrap to
+   two; the grid cells stretch to a common height and .abex-stat centres its
+   content, so the short column's figure dropped by half a line.
+
+   Giving every label the height of two lines makes the three blocks equal, so
+   centring lines the figures up. The cells are also told not to stretch, so a
+   label running to three lines somewhere could not shift the other two either.
+   The divider stays centred on its own block, as designed. */
+@media (max-width: 767px) {
+  .elementor-element-stab > div,
+  .elementor-element-stab .elementor-widget-container > div,
+  .elementor-element-stab div:has(> .abex-stat) {
+    align-items: start !important;
+  }
+  .abex-stat > div > span:last-child {
+    display: block;
+    min-height: 2.7em !important;
+  }
+}
+
+
+/* "Our track record" is an h2 in the markup but carries the .abex-h3 class, so
+   it rendered at 21px on desktop and 18px on mobile — smaller than it reads as
+   a section heading. 28/22 gives it weight without competing with the 56px
+   figures beneath it. */
+.elementor-element-stah,
+.elementor-element-stah .elementor-heading-title {
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 767px) {
+  .elementor-element-stah,
+  .elementor-element-stah .elementor-heading-title {
+    font-size: 22px !important;
+  }
+}
+
+
+/* ==================================================================
+   Tablet, 768-1024
+
+   The same fault as mobile: columns sized in percentages wrap onto their own
+   line but keep their old width, so the About copy sits in 44% of the row with
+   the right half empty, the testimonial photo shrinks to ~245px, and the track
+   record fits only two of its three figures.
+
+   The header is its own case — UAE drops the menu to a hamburger at tablet, so
+   the logo, hamburger and CTA no longer fit one row and the button wrapped
+   underneath the logo. Same treatment as mobile: logo left, hamburger right,
+   CTA hidden (it duplicates Contact Us in the menu).
+
+   The service cards, clientele cards, panels and contact block all lay out
+   correctly at this width and are left alone.
+   ================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .elementor-element-hdrin001,
+  .elementor-element-hdrin001 > .e-con-inner {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .elementor-element-hdrcta0 { display: none !important; }
+  .elementor-element-hdrnav0 {
+    flex: 1 1 0% !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+  .elementor-element-hdrnav0 > .elementor-widget-container,
+  .elementor-element-hdrnav0 .hfe-nav-menu-wrapper {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon,
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle { margin-left: auto !important; }
+
+  body .elementor-element.elementor-element-abtimg.elementor-element-abtimg,
+  body .elementor-element.elementor-element-abttxt.elementor-element-abttxt,
+  body .elementor-element.elementor-element-clihl.elementor-element-clihl,
+  body .elementor-element.elementor-element-clihr.elementor-element-clihr,
+  body .elementor-element.elementor-element-tsthl.elementor-element-tsthl,
+  body .elementor-element.elementor-element-tsthr.elementor-element-tsthr,
+  body .elementor-element.elementor-element-tstimg.elementor-element-tstimg,
+  body .elementor-element.elementor-element-tstcol.elementor-element-tstcol,
+  body .elementor-element.elementor-element-stah.elementor-element-stah,
+  body .elementor-element.elementor-element-stab.elementor-element-stab {
+    width: 100% !important;
+    max-width: 100% !important;
+    --width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Track record: three across, figures on one baseline. */
+  .elementor-element-stab > div,
+  .elementor-element-stab .elementor-widget-container > div,
+  .elementor-element-stab div:has(> .abex-stat) {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    align-items: start !important;
+  }
+  .abex-stat > div > span:last-child {
+    display: block;
+    min-height: 2.7em !important;
+  }
+}
+
+
+/* Tablet header, second pass. Flex alignment left the hamburger stranded
+   mid-row (x=451 of 768, x=579 of 1024) exactly as it did on mobile, because
+   UAE's menu wrapper is positioned and .elementor-widget-container is not
+   rendered in this build. Same remedy: make the wrapper chain static and
+   anchor the toggle to the header row — measured at 71px tall with the logo
+   centred on y=35.5 — against the 48px tablet gutter. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .elementor-element.elementor-element-hdrin001.elementor-element-hdrin001 {
+    position: relative !important;
+  }
+  .elementor-element-hdrnav0,
+  .elementor-element-hdrnav0 > .elementor-widget-container,
+  .elementor-element-hdrnav0 .hfe-nav-menu-wrapper {
+    position: static !important;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle {
+    position: absolute !important;
+    top: 0 !important;
+    right: 48px !important;
+    height: 71px !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5;
+  }
+  .elementor-element-hdrnav0 .hfe-nav-menu-icon { margin: 0 !important; }
+}
+
+
+/* ---- Tablet fix 3: match hamburger right gap to logo left gap ---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-element-hdrnav0 .hfe-nav-menu__toggle,
+  .elementor-element-hdrnav0 .hfe-menu-toggle { right: 22px !important; }
+}
+
+
+/* ==================================================================
+   Tablet fix 4: the three grids that stayed at desktop track width
+
+   At 768-1024 the service cards, the value cards and the How We Work
+   panel columns all kept the width their desktop three-up / two-up
+   tracks gave them, wrapped onto new lines, and left the right third
+   (services) or right half (panels) of the section empty. The design's
+   768 mock runs services and values two-up across the full measure and
+   gives each panel's text and image the whole panel width, which is
+   also what lets the activities list, the numbered rings and the
+   meters fall back into their two-column auto-fit grids.
+
+   The gap is set here rather than inherited so the calc() basis is
+   exact at both ends of the range.
+   ================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Services: two cards per row, filling the navy band. */
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0,
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0 > .e-con-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 32px 24px !important;
+  }
+  body .elementor-element.elementor-element-svccard1.elementor-element-svccard1,
+  body .elementor-element.elementor-element-svccard2.elementor-element-svccard2,
+  body .elementor-element.elementor-element-svccard3.elementor-element-svccard3 {
+    width: calc(50% - 12px) !important;
+    --width: calc(50% - 12px) !important;
+    flex: 0 0 calc(50% - 12px) !important;
+    max-width: none !important;
+  }
+
+  /* Values: two across, then one, as in the 768 mock. */
+  body .elementor-element.elementor-element-val00001.elementor-element-val00001 > .e-con-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 40px 0 !important;
+  }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 {
+    width: 50% !important;
+    --width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: none !important;
+  }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1 { padding-left: 0 !important; }
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 { padding-left: 0 !important; border-width: 0 !important; }
+
+  /* How We Work: each panel's text and image take the whole panel. */
+  body .elementor-element.elementor-element-pnl1txt.elementor-element-pnl1txt,
+  body .elementor-element.elementor-element-pnl2txt.elementor-element-pnl2txt,
+  body .elementor-element.elementor-element-pnl3txt.elementor-element-pnl3txt,
+  body .elementor-element.elementor-element-pnl1img.elementor-element-pnl1img,
+  body .elementor-element.elementor-element-pnl2img.elementor-element-pnl2img,
+  body .elementor-element.elementor-element-pnl3img.elementor-element-pnl3img {
+    width: 100% !important;
+    --width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: none !important;
+    align-self: stretch !important;
+  }
+}
+
+
+/* ==================================================================
+   Tablet fix 5: the contact photo
+
+   Once the photo stops sharing a row with the form it keeps the 420px
+   min-height meant for a half-width column. At full tablet width that
+   is a shallow letterbox, and cover crops it around the centre of the
+   frame, which in this photograph is empty sky — the cranes, the
+   container stack and the hull all sit in the lower half and were cut
+   off. 500px matches the block in the 768 mock, and anchoring the crop
+   at 78% keeps the whole subject in frame from the crane tops down to
+   the waterline.
+   ================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .elementor-element.elementor-element-conimg.elementor-element-conimg {
+    min-height: 500px !important;
+    background-position: center 78% !important;
+    background-size: cover !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile footer, option C: contact first
+
+   Scoped to 560px and below, which is exactly the range where the
+   footer's own grid is already a single column — the two-column grid
+   from 561px up is untouched, as are tablet and desktop.
+
+   1. Side padding. The footer was running 68px of gutter on a 390px
+      screen: the container's own 48px plus the 20px every .abex section
+      picked up in the mobile gutter fix. The design mock uses about 21.
+      That surplus is what broke "Project management systems and
+      controls" onto two lines and pushed the email address to within
+      14px of the screen edge. 24px gives the content 342px to work in.
+
+   2. Order. ftrc1 carries no padding, background or border, so setting
+      it to display:contents costs nothing and lifts its logo, tagline
+      and button into the footer's own flow, where they can be ordered
+      independently of each other. The contact column then sits between
+      the tagline and the enquiry button, and the two link lists follow.
+
+   3. Navigation runs two-up, each link keeping its own rule rather than
+      the single rule down the block, since one rule cannot serve two
+      columns.
+   ================================================================== */
+@media (max-width: 560px) {
+
+  body .elementor-element.elementor-element-ftr00001.elementor-element-ftr00001 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  body .elementor-element.elementor-element-ftrin001.elementor-element-ftrin001,
+  body .elementor-element.elementor-element-ftrbar0.elementor-element-ftrbar0 {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* ftrin001 is a boxed container, so its padding splits across two
+     levels; the inner one is zeroed to keep the total at 24. */
+  body .elementor-element.elementor-element-ftrin001.elementor-element-ftrin001 > .e-con-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+  }
+
+  .elementor-element-ftrc1 { display: contents !important; }
+
+  .elementor-element-ftrlogo { order: 1 !important; }
+  .elementor-element-ftrtxt  { order: 2 !important; }
+  .elementor-element-ftrc4   { order: 3 !important; margin-top: 14px !important; }
+  .elementor-element-ftrcta  { order: 4 !important; margin-top: 4px !important;
+                               align-self: flex-start !important; }
+  .elementor-element-ftrc2   { order: 5 !important; margin-top: 16px !important; }
+  .elementor-element-ftrc3   { order: 6 !important; margin-top: 16px !important; }
+
+  .elementor-element-ftrc2 .abex-footer-col {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 14px !important;
+    border-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  .elementor-element-ftrc2 .abex-footer-col > a {
+    border-left: 1px solid var(--abex-rule-navy);
+    padding: 7px 0 7px 16px;
+  }
+}
+
+
+/* Phone beside Email, above the address. The pair needs 305px of measure
+   and only has it from 376px up, so below that the contact block keeps
+   its source order rather than wrapping the numbers. The children are
+   placed by index because the block is one flat grid:
+   1 street, 2 PO box, 3 "Phone:", 4 the numbers, 5 "Email:", 6 the address. */
+@media (min-width: 376px) and (max-width: 560px) {
+  .elementor-element-ftrc4 .abex-footer-col {
+    grid-template-columns: max-content minmax(0, 1fr) !important;
+    gap: 6px 18px !important;
+  }
+  .elementor-element-ftrc4 .abex-footer-col > *:nth-child(3) { grid-column: 1; grid-row: 1; margin-top: 0 !important; }
+  .elementor-element-ftrc4 .abex-footer-col > *:nth-child(4) { grid-column: 1; grid-row: 2; white-space: nowrap; }
+  .elementor-element-ftrc4 .abex-footer-col > *:nth-child(5) { grid-column: 2; grid-row: 1; margin-top: 0 !important; }
+  .elementor-element-ftrc4 .abex-footer-col > *:nth-child(6) { grid-column: 2; grid-row: 2; }
+  .elementor-element-ftrc4 .abex-footer-col > *:nth-child(1) { grid-column: 1 / -1; grid-row: 3; margin-top: 12px; }
+  .elementor-element-ftrc4 .abex-footer-col > *:nth-child(2) { grid-column: 1 / -1; grid-row: 4; }
+}
+
+
+/* ==================================================================
+   The open hamburger panel, mobile and tablet
+
+   Closed, the header was right. Open, the panel came out about 180px
+   wide, pinned under the logo, with its labels white on white.
+
+   Cause: every rule in this file that targeted .hfe-nav-menu-wrapper
+   was a no-op — UAE 2.9.6 does not render that class here, so nothing
+   ever sized or positioned the panel and it fell back to the shrunk
+   width of the toggle's own column. The toggle rules worked only
+   because they target .hfe-nav-menu__toggle / .hfe-menu-toggle, which
+   do exist.
+
+   Rather than guess at another class name, this targets the panel by
+   structure — the widget id plus the nav / ul / li / a it contains,
+   all of which are confirmed to match. The id class is repeated three
+   times so these outrank UAE's own .hfe-nav-menu descendant rules,
+   which carry !important of their own.
+
+   Only the open panel's box and type are set here; the show/hide stays
+   UAE's, so the closed header renders exactly as before.
+   ================================================================== */
+@media (max-width: 1024px) {
+
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: #fff !important;
+    box-shadow: 0 18px 40px rgba(7, 11, 58, .18) !important;
+    z-index: 30 !important;
+  }
+
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav ul {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav a {
+    display: block !important;
+    width: auto !important;
+    color: #12152E !important;
+    font-family: Archivo, sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    padding: 16px 24px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #E7E4DC !important;
+    text-align: left !important;
+    background: none !important;
+  }
+
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav a:hover,
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav a:focus-visible {
+    color: #C42A21 !important;
+    background: #F5F2EC !important;
+  }
+
+  body .elementor-element-hdrnav0.elementor-element-hdrnav0.elementor-element-hdrnav0 nav li:last-child a {
+    border-bottom: 0 !important;
+  }
+}
+
+
+/* ==================================================================
+   Banner plate on mobile: two lines in a compact rectangle
+
+   The plate kept the desktop proportions — an 84px circle, 48px of
+   container gutter and up to 32px of inner padding — which left the
+   headline about 184px of measure at 390 and broke it over five lines
+   into a tall block. Reclaiming that width is most of the fix: a 16px
+   gutter, a 44px circle and 18px of inner padding give the text ~296px,
+   enough for two lines at 16-17px.
+
+   max-width on the plate keeps it two lines at the top of the range
+   too — without it the measure grows past 600px and the headline
+   collapses onto one line. Below 360px the circle and padding come
+   down again so the second line still fits.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-baninner.elementor-element-baninner,
+  body .elementor-element.elementor-element-baninner.elementor-element-baninner > .e-con-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .elementor-element-banplate .abex-reveal {
+    padding: 14px 18px 14px 0 !important;
+    gap: 12px !important;
+    max-width: 420px !important;
+    width: auto !important;
+  }
+
+  .elementor-element-banplate .abex-reveal > span {
+    width: 44px !important;
+    height: 44px !important;
+    margin-left: -12px !important;
+    font-size: 18px !important;
+  }
+
+  .elementor-element-banplate p {
+    font-size: clamp(12.5px, 4.2vw, 19px) !important;
+    line-height: 1.25 !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .elementor-element-banplate .abex-reveal {
+    padding: 12px 12px 12px 0 !important;
+    gap: 10px !important;
+  }
+  .elementor-element-banplate .abex-reveal > span {
+    width: 38px !important;
+    height: 38px !important;
+    margin-left: -10px !important;
+    font-size: 16px !important;
+  }
+}
+
+
+/* ==================================================================
+   Tablet fix 6: values and services run three across, not two
+
+   This reverses the two-up decision in tablet fix 4. That followed the
+   768 mock, which wraps both rows two-up and leaves the third card
+   alone on its own line. On the live page that reads as a wrap fault
+   rather than a layout, so both rows are pinned to three.
+
+   flex-wrap: nowrap is what actually holds the third card up; the
+   widths alone would still allow a wrap if any card's content pushed
+   past its track. min-width: 0 lets the long service titles wrap
+   inside their card instead of widening it.
+
+   The value columns get their dividers back, at 18px rather than the
+   desktop 28px, because a third of 768 leaves about 224px per column
+   and the padding comes straight off the text.
+   ================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0,
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0 > .e-con-inner {
+    flex-wrap: nowrap !important;
+    gap: 0 20px !important;
+  }
+  body .elementor-element.elementor-element-svccard1.elementor-element-svccard1,
+  body .elementor-element.elementor-element-svccard2.elementor-element-svccard2,
+  body .elementor-element.elementor-element-svccard3.elementor-element-svccard3 {
+    width: calc((100% - 40px) / 3) !important;
+    --width: calc((100% - 40px) / 3) !important;
+    flex: 0 0 calc((100% - 40px) / 3) !important;
+    min-width: 0 !important;
+  }
+
+  body .elementor-element.elementor-element-val00001.elementor-element-val00001 > .e-con-inner {
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+  }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 {
+    width: 33.333% !important;
+    --width: 33.333% !important;
+    flex: 0 0 33.333% !important;
+    min-width: 0 !important;
+  }
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 {
+    padding-left: 18px !important;
+    border-left-width: 1px !important;
+  }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1 {
+    padding-left: 0 !important;
+  }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2 {
+    padding-right: 18px !important;
+  }
+}
+
+
+/* ==================================================================
+   Tablet header: bring back the Get in touch button
+
+   Tablet pass 1 hid hdrcta0 because the header row is flex with
+   space-between, so the button landed in the same place as the
+   hamburger. It is restored here out of the flow instead, anchored to
+   the same right edge the toggle uses, which is why the toggle itself
+   needs no change at all.
+
+   right: 72px puts the button's right edge 19px clear of the burger
+   glyph. The glyph sits 54px in from the viewport edge at both 768 and
+   1024 (the toggle is anchored at right: 22px and the icon carries its
+   own inset), so one offset serves the whole range.
+
+   Mobile keeps the button hidden — that rule lives in the max-width:
+   767px block and is untouched.
+   ================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .elementor-element.elementor-element-hdrcta0.elementor-element-hdrcta0 {
+    display: flex !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 72px !important;
+    height: 71px !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    --width: auto !important;
+    z-index: 4;
+  }
+}
+
+
+/* ==================================================================
+   Mobile: close the gap under the How We Work stack
+
+   pnlstack carries padding-bottom: 160px as a flat value, so the run
+   between the last panel and the contact photo measured about 148px at
+   390 and at 1280 alike. On desktop that is right — the 1440 mock has
+   roughly 180px there — but on a phone it is a fifth of the screen.
+
+   36px on the outer container only. pnlstack is boxed, so Elementor
+   splits the box across the element and its .e-con-inner; the padding
+   actually sits on one of the two, and setting both would double it,
+   so the inner is zeroed explicitly.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-pnlstack.elementor-element-pnlstack {
+    padding-bottom: 36px !important;
+  }
+  body .elementor-element.elementor-element-pnlstack.elementor-element-pnlstack > .e-con-inner {
+    padding-bottom: 0 !important;
+  }
+}
+
+
+/* ==================================================================
+   Mobile: tighten the band around the banner
+
+   Three flat desktop values stacked up either side of it:
+     sta00001 padding-bottom  112px  -> 128px of empty bone above
+     ban00001 min-height      480px  -> the photo took 481px of screen
+     pnlhead0 padding-top     120px  -> 120px of empty bone below
+
+   None of them scale, so on a 390px phone the banner sat in roughly
+   250px of dead space. Trimmed to 40 / 380 / 44, which keeps the photo
+   reading as a full-bleed break without the voids.
+
+   Both section containers are boxed, so Elementor splits the box across
+   the element and its .e-con-inner and the padding sits on one of the
+   two — the inner is zeroed so the value is not applied twice.
+   ================================================================== */
+@media (max-width: 767px) {
+  body .elementor-element.elementor-element-sta00001.elementor-element-sta00001 {
+    padding-bottom: 40px !important;
+  }
+  body .elementor-element.elementor-element-sta00001.elementor-element-sta00001 > .e-con-inner {
+    padding-bottom: 0 !important;
+  }
+
+  body .elementor-element.elementor-element-ban00001.elementor-element-ban00001 {
+    min-height: 380px !important;
+  }
+
+  body .elementor-element.elementor-element-pnlhead0.elementor-element-pnlhead0 {
+    padding-top: 44px !important;
+  }
+  body .elementor-element.elementor-element-pnlhead0.elementor-element-pnlhead0 > .e-con-inner {
+    padding-top: 0 !important;
+  }
+}

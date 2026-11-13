@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------------
+   ABEX logo.
+
+   The mark is embedded here rather than loaded from the media library:
+   this host re-encodes uploaded PNGs into blank files, so an <img>
+   pointing at the uploaded logo renders as an empty white box. A data
+   URI never goes through that pipeline.
+
+   It lives in its own stylesheet, not in Additional CSS, because the
+   Customizer truncates a value this long, which left background-image
+   invalid and the logo invisible.
+
+   Both cuts are the same artwork with the surround knocked out, so the
+   mark reads on the white header and on the navy footer alike.
+   ------------------------------------------------------------------ */
+
+.abex-logo {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+.abex-logo--hdr {
+  width: 129px;
+  height: 42px;
+  background-image: url("data:image/png;base64,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");
+}
+
+.abex-logo--ftr {
+  width: 118px;
+  height: 38px;
+  background-image: url("data:image/png;base64,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");
+}

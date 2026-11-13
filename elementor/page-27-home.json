@@ -1,0 +1,2189 @@
+[
+  {
+    "id": "hero0001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "0",
+        "isLinked": true
+      },
+      "flex_gap": {
+        "row": "0",
+        "size": 0,
+        "unit": "px",
+        "column": "0"
+      },
+      "css_classes": "abex abex-underbar",
+      "content_width": "full",
+      "flex_direction": "row"
+    },
+    "elements": [
+      {
+        "id": "herorail",
+        "elType": "container",
+        "settings": {
+          "width": {
+            "size": 62,
+            "unit": "px"
+          },
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "_flex_grow": 0,
+          "css_classes": "abex-rail",
+          "_flex_shrink": 0,
+          "content_width": "full"
+        },
+        "elements": [
+          {
+            "id": "herailw1",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-rail__in\"><a href=\"tel:+61755435553\">+61 (07) 5543 5553</a><span></span><a href=\"mailto:abex@abex.com.au\">abex@abex.com.au</a></div>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "herobody",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "112",
+            "left": "48",
+            "unit": "px",
+            "right": "48",
+            "bottom": "112",
+            "isLinked": false
+          },
+          "_flex_grow": 1,
+          "min_height": {
+            "size": 680,
+            "unit": "px"
+          },
+          "css_classes": "abex-hero",
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_size": "cover",
+          "background_image": {
+            "id": 9,
+            "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-open-pit-mine.jpg"
+          },
+          "background_position": "center center",
+          "flex_justify_content": "center",
+          "background_background": "classic"
+        },
+        "elements": [
+          {
+            "id": "8817d51",
+            "elType": "widget",
+            "settings": {
+              "html": "<style>\n.abex-heroslides-w { position: absolute !important; inset: 0; z-index: 0 !important; }\n.abex-heroslides-w .elementor-widget-container { position: absolute; inset: 0; }\n.abex-heroslides { position: absolute; inset: 0; overflow: hidden; }\n.abex-heroslides img {\n  position: absolute; inset: 0; width: 100%; height: 100%;\n  object-fit: cover; object-position: 60% center;\n  opacity: 0; transform: scale(1);\n  transition: opacity 1.4s ease, transform 7s linear;\n}\n.abex-heroslides img.is-on { opacity: 1; transform: scale(1.08); }\n.abex-heroslides__dots {\n  position: absolute; right: clamp(20px, 4vw, 48px); bottom: 32px; z-index: 3;\n  display: flex; gap: 10px; align-items: center;\n}\n.abex-heroslides__dots button {\n  width: 56px; height: 4px; padding: 0; border: 0; border-radius: 0;\n  background: rgba(255, 255, 255, .35); cursor: pointer;\n  position: relative; overflow: hidden;\n}\n.abex-heroslides__dots span {\n  position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #fff;\n}\n.abex-heroslides__dots button.is-on span { width: 100%; transition: width 6s linear; }\n@media (prefers-reduced-motion: reduce) {\n  .abex-heroslides img { transition: none; }\n  .abex-heroslides img.is-on { transform: none; }\n  .abex-heroslides__dots button.is-on span { transition: none; }\n}\n</style>\n\n<div class=\"abex-heroslides\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-hydro-power-facility.jpg\" alt=\"Hydroelectric power facility\" class=\"is-on\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-open-pit-mine.jpg\" alt=\"Open-pit mine\" loading=\"lazy\">\n  <img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/hero-hydro-power-station.jpg\" alt=\"Hydroelectric power station\" loading=\"lazy\">\n  <div class=\"abex-heroslides__dots\">\n    <button type=\"button\" class=\"is-on\" aria-label=\"Show image 1\"><span></span></button>\n    <button type=\"button\" aria-label=\"Show image 2\"><span></span></button>\n    <button type=\"button\" aria-label=\"Show image 3\"><span></span></button>\n  </div>\n</div>\n\n<script>\n/* Hero slider: three images on a 6s cycle, as in ABEX_Home_v3.dc.html.\n   Elementor free has no Slides widget, so this is hand-rolled. With JS off the\n   first image stays put and the container background shows through regardless. */\n( function () {\n\t'use strict';\n\n\tfunction init( root ) {\n\t\tvar imgs = root.querySelectorAll( 'img' );\n\t\tvar dots = root.querySelectorAll( '.abex-heroslides__dots button' );\n\t\tif ( imgs.length < 2 ) { return; }\n\n\t\tvar at = 0;\n\t\tvar timer = null;\n\t\tvar reduced = window.matchMedia &&\n\t\t\twindow.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;\n\n\t\tfunction show( i ) {\n\t\t\tat = ( i + imgs.length ) % imgs.length;\n\t\t\tfor ( var n = 0; n < imgs.length; n++ ) {\n\t\t\t\timgs[ n ].classList.toggle( 'is-on', n === at );\n\t\t\t\tif ( dots[ n ] ) {\n\t\t\t\t\t/* Reset the bar to zero width with no transition, then let the\n\t\t\t\t\t   class re-apply it, or it would ease back down. */\n\t\t\t\t\tdots[ n ].classList.remove( 'is-on' );\n\t\t\t\t\tvoid dots[ n ].offsetWidth;\n\t\t\t\t\tdots[ n ].classList.toggle( 'is-on', n === at );\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tfunction start() {\n\t\t\tif ( reduced ) { return; }\n\t\t\twindow.clearInterval( timer );\n\t\t\ttimer = window.setInterval( function () { show( at + 1 ); }, 6000 );\n\t\t}\n\n\t\tfor ( var d = 0; d < dots.length; d++ ) {\n\t\t\t( function ( i ) {\n\t\t\t\tdots[ i ].addEventListener( 'click', function () { show( i ); start(); } );\n\t\t\t} )( d );\n\t\t}\n\n\t\tshow( 0 );\n\t\tstart();\n\n\t\t/* Nothing to animate while the tab is hidden. */\n\t\tdocument.addEventListener( 'visibilitychange', function () {\n\t\t\tif ( document.hidden ) { window.clearInterval( timer ); } else { start(); }\n\t\t} );\n\t}\n\n\tfunction boot() {\n\t\tvar nodes = document.querySelectorAll( '.abex-heroslides' );\n\t\tfor ( var i = 0; i < nodes.length; i++ ) {\n\t\t\tif ( ! nodes[ i ].hasAttribute( 'data-abex-ready' ) ) {\n\t\t\t\tnodes[ i ].setAttribute( 'data-abex-ready', '1' );\n\t\t\t\tinit( nodes[ i ] );\n\t\t\t}\n\t\t}\n\t}\n\n\tif ( document.readyState === 'loading' ) {\n\t\tdocument.addEventListener( 'DOMContentLoaded', boot );\n\t} else {\n\t\tboot();\n\t}\n}() );\n</script>",
+              "_css_classes": "abex-heroslides-w"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "heroinner",
+            "elType": "container",
+            "settings": {
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "26",
+                "size": 26,
+                "unit": "px",
+                "column": "26"
+              },
+              "content_width": "boxed",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start"
+            },
+            "elements": [
+              {
+                "id": "heropill",
+                "elType": "widget",
+                "settings": {
+                  "title": "Business and Project Management Consultants",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill abex-pill--glass"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "heroh1",
+                "elType": "widget",
+                "settings": {
+                  "title": "Better performance and outcomes for your projects",
+                  "header_size": "h1",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h1"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "herolead",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>ABEX Management Services specialises in efficient, effective and economic solutions to improve the performance and outcomes of our clients&rsquo; businesses or projects.</p>",
+                  "text_color": "#FFFFFF",
+                  "_css_classes": "abex-lead"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "herocta",
+                "elType": "widget",
+                "settings": {
+                  "link": {
+                    "url": "#contact",
+                    "nofollow": "",
+                    "is_external": ""
+                  },
+                  "text": "Make an enquiry",
+                  "_css_classes": "abex-btn"
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "cap00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "80",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "80",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "32",
+        "size": 32,
+        "unit": "px",
+        "column": "32"
+      },
+      "css_classes": "abex abex-wedge",
+      "border_color": "#E4E1DA",
+      "border_width": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "1",
+        "isLinked": false
+      },
+      "border_border": "solid",
+      "content_width": "boxed",
+      "flex_direction": "row",
+      "background_color": "#FFFFFF",
+      "flex_align_items": "flex-start",
+      "background_background": "classic"
+    },
+    "elements": [
+      {
+        "id": "capmark",
+        "elType": "widget",
+        "settings": {
+          "html": "<span style=\"display:block;font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(80px,9vw,130px);line-height:.72;color:#E63A2E\">&ldquo;</span>",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "size": 90,
+            "unit": "px"
+          }
+        },
+        "elements": [],
+        "widgetType": "html"
+      },
+      {
+        "id": "captext",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "16",
+            "size": 16,
+            "unit": "px",
+            "column": "16"
+          },
+          "_flex_grow": 1,
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start"
+        },
+        "elements": [
+          {
+            "id": "capquote",
+            "elType": "widget",
+            "settings": {
+              "title": "We constantly endeavour to exceed our clients’ expectations.",
+              "header_size": "p",
+              "_css_classes": "abex-quote"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "caprule",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-rule\"></div>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "abt00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "120",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "120",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "48",
+        "size": 72,
+        "unit": "px",
+        "column": "72"
+      },
+      "flex_wrap": "wrap",
+      "css_classes": "abex",
+      "content_width": "boxed",
+      "flex_direction": "row",
+      "flex_align_items": "center"
+    },
+    "elements": [
+      {
+        "id": "abtimg",
+        "elType": "widget",
+        "settings": {
+          "html": "<div class=\"abex-reveal abex-wipe\" style=\"position:relative;padding:0 14% 18% 0\"><div style=\"position:relative;overflow:hidden;aspect-ratio:4/3.4;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/about-open-pit-mine.jpg\" alt=\"Open-pit mine\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,27,122,.05) 30%,rgba(20,27,122,.55) 75%,rgba(11,16,80,.85) 100%)\"></div><div style=\"position:absolute;left:24px;bottom:24px;display:grid;gap:4px;color:#fff\"><span style=\"font-family:Archivo,sans-serif;font-weight:600;font-size:clamp(40px,4.5vw,60px);line-height:1\">40<span style=\"color:#E63A2E\">+</span></span><span style=\"font-size:14px;font-weight:500\">Years operational experience</span></div></div><div style=\"position:absolute;left:0;top:-14px;height:8px;width:45%;background:#E63A2E\"></div><div style=\"position:absolute;right:0;bottom:0;width:46%;aspect-ratio:4/4.8;border:10px solid #FBFAF7;overflow:hidden;background:#141B7A;box-shadow:0 24px 48px rgba(11,16,80,.22)\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/about-consultants-reviewing-work.jpg\" alt=\"Consultants reviewing work\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(20,27,122,.7),rgba(230,58,46,.08) 60%,rgba(0,0,0,0))\"></div></div></div>",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "size": 46,
+            "unit": "%"
+          }
+        },
+        "elements": [],
+        "widgetType": "html"
+      },
+      {
+        "id": "abttxt",
+        "elType": "container",
+        "settings": {
+          "width": {
+            "size": 44,
+            "unit": "%"
+          },
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "22",
+            "size": 22,
+            "unit": "px",
+            "column": "22"
+          },
+          "css_classes": "abex-reveal",
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start"
+        },
+        "elements": [
+          {
+            "id": "abtpill",
+            "elType": "widget",
+            "settings": {
+              "title": "About Us",
+              "header_size": "div",
+              "_css_classes": "abex-pill"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "abth2",
+            "elType": "widget",
+            "settings": {
+              "title": "Experience and Expertise",
+              "header_size": "h2",
+              "title_color": "#12152E",
+              "_css_classes": "abex-h2"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "abtp1",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>With some 40 years operational experience, we have extensive knowledge and understanding of project and business needs. Whilst maintaining a commercial approach on behalf of our clients, we ensure that other key perspectives, such as statutory, social, and environmental elements, are considered and managed accordingly.</p><p>As a small to medium enterprise, we are well positioned to provide a responsive and flexible relationship to our clients and other stakeholders.</p>",
+              "_css_classes": "abex-body"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "abtcon",
+            "elType": "widget",
+            "settings": {
+              "html": "<div style=\"display:grid;gap:4px;font-weight:600;font-size:15px;padding:6px 0\"><span>PHONE: +61 (07) 5543 5553</span><span>EMAIL: abex@abex.com.au</span></div>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "abtcta",
+            "elType": "widget",
+            "settings": {
+              "link": {
+                "url": "#",
+                "nofollow": "",
+                "is_external": ""
+              },
+              "text": "More about us",
+              "_css_classes": "abex-btn"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "marq0001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "60",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "60",
+        "isLinked": false
+      },
+      "css_classes": "abex",
+      "border_color": "#E4E1DA",
+      "border_width": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "1",
+        "isLinked": false
+      },
+      "border_border": "solid",
+      "content_width": "full"
+    },
+    "elements": [
+      {
+        "id": "marqw1",
+        "elType": "widget",
+        "settings": {
+          "html": "<div class=\"abex-marquee\"><div class=\"abex-marquee__track\"><span class=\"abex-marquee__group\">Efficient<i></i>Effective<i></i>Economic<i></i>Business and Project Management Consultants<i></i></span><span class=\"abex-marquee__group\">Efficient<i></i>Effective<i></i>Economic<i></i>Business and Project Management Consultants<i></i></span></div></div>"
+        },
+        "elements": [],
+        "widgetType": "html"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "val00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "120",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "32",
+        "size": 0,
+        "unit": "px",
+        "column": "0"
+      },
+      "flex_wrap": "wrap",
+      "css_classes": "abex",
+      "content_width": "boxed",
+      "flex_direction": "row"
+    },
+    "elements": [
+      {
+        "id": "valc1",
+        "elType": "container",
+        "settings": {
+          "width": {
+            "size": 33.33,
+            "unit": "%"
+          },
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "28",
+            "bottom": "0",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "row": "16",
+            "size": 16,
+            "unit": "px",
+            "column": "16"
+          },
+          "css_classes": "abex-reveal",
+          "border_color": "#E4E1DA",
+          "border_width": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "1",
+            "bottom": "0",
+            "isLinked": false
+          },
+          "border_border": "solid",
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start"
+        },
+        "elements": [
+          {
+            "id": "valc1i",
+            "elType": "widget",
+            "settings": {
+              "html": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"#12152E\" stroke-width=\"1.5\"><circle cx=\"20\" cy=\"17\" r=\"9\"></circle><path d=\"M16 30h8M17 34h6\"></path><path d=\"M20 8V3M8 17H3M37 17h-5M11 8 8 5M29 8l3-3\" stroke=\"#E63A2E\"></path></svg>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "valc1h",
+            "elType": "widget",
+            "settings": {
+              "title": "Exceed our clients’ expectations",
+              "header_size": "h3",
+              "title_color": "#12152E",
+              "_css_classes": "abex-h3"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "valc1t",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>We constantly endeavour to exceed our clients&rsquo; expectations.</p>",
+              "_css_classes": "abex-small"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "feb3539",
+            "elType": "widget",
+            "settings": {
+              "link": {
+                "url": "#",
+                "nofollow": "",
+                "is_external": ""
+              },
+              "text": "Learn more →",
+              "_css_classes": "abex-link"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "valc2",
+        "elType": "container",
+        "settings": {
+          "width": {
+            "size": 33.33,
+            "unit": "%"
+          },
+          "padding": {
+            "top": "0",
+            "left": "28",
+            "unit": "px",
+            "right": "28",
+            "bottom": "0",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "row": "16",
+            "size": 16,
+            "unit": "px",
+            "column": "16"
+          },
+          "css_classes": "abex-reveal abex-reveal--d1",
+          "border_color": "#E4E1DA",
+          "border_width": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "1",
+            "bottom": "0",
+            "isLinked": false
+          },
+          "border_border": "solid",
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start"
+        },
+        "elements": [
+          {
+            "id": "valc2i",
+            "elType": "widget",
+            "settings": {
+              "html": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"#12152E\" stroke-width=\"1.5\"><rect x=\"5\" y=\"10\" width=\"30\" height=\"22\"></rect><path d=\"M5 17h30\"></path><circle cx=\"20\" cy=\"25\" r=\"3.5\" stroke=\"#E63A2E\"></circle></svg>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "valc2h",
+            "elType": "widget",
+            "settings": {
+              "title": "Deliver exceptional value for money",
+              "header_size": "h3",
+              "title_color": "#12152E",
+              "_css_classes": "abex-h3"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "valc2t",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>We strive to provide innovative services that deliver exceptional value for money.</p>",
+              "_css_classes": "abex-small"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "27e73ae",
+            "elType": "widget",
+            "settings": {
+              "link": {
+                "url": "#",
+                "nofollow": "",
+                "is_external": ""
+              },
+              "text": "Learn more →",
+              "_css_classes": "abex-link"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "valc3",
+        "elType": "container",
+        "settings": {
+          "width": {
+            "size": 33.33,
+            "unit": "%"
+          },
+          "padding": {
+            "top": "0",
+            "left": "28",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "row": "16",
+            "size": 16,
+            "unit": "px",
+            "column": "16"
+          },
+          "css_classes": "abex-reveal abex-reveal--d2",
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start"
+        },
+        "elements": [
+          {
+            "id": "valc3i",
+            "elType": "widget",
+            "settings": {
+              "html": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"#12152E\" stroke-width=\"1.5\"><rect x=\"8\" y=\"5\" width=\"24\" height=\"30\"></rect><path d=\"M13 14l2 2 4-4M13 22l2 2 4-4\" stroke=\"#E63A2E\"></path><path d=\"M22 15h6M22 23h6\"></path></svg>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "valc3h",
+            "elType": "widget",
+            "settings": {
+              "title": "Responsive, responsible and reliable",
+              "header_size": "h3",
+              "title_color": "#12152E",
+              "_css_classes": "abex-h3"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "valc3t",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Giving consideration to all stakeholders on every engagement.</p>",
+              "_css_classes": "abex-small"
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "6fa78fa",
+            "elType": "widget",
+            "settings": {
+              "link": {
+                "url": "#",
+                "nofollow": "",
+                "is_external": ""
+              },
+              "text": "Learn more →",
+              "_css_classes": "abex-link"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "svchead0",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "40",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "18",
+        "size": 18,
+        "unit": "px",
+        "column": "18"
+      },
+      "css_classes": "abex abex-reveal",
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_align_items": "flex-start"
+    },
+    "elements": [
+      {
+        "id": "svcpill",
+        "elType": "widget",
+        "settings": {
+          "title": "Services",
+          "header_size": "div",
+          "_css_classes": "abex-pill"
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "svch2",
+        "elType": "widget",
+        "settings": {
+          "title": "Management expertise for every project phase",
+          "header_size": "h2",
+          "title_color": "#12152E",
+          "_css_classes": "abex-h2"
+        },
+        "elements": [],
+        "widgetType": "heading"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "svcband0",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "0",
+        "isLinked": true
+      },
+      "css_classes": "abex",
+      "content_width": "full",
+      "flex_direction": "column",
+      "background_color": "#141B7A",
+      "background_background": "classic"
+    },
+    "elements": [
+      {
+        "id": "svcrow0",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "72",
+            "left": "48",
+            "unit": "px",
+            "right": "48",
+            "bottom": "56",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "row": "32",
+            "size": 20,
+            "unit": "px",
+            "column": "20"
+          },
+          "flex_wrap": "wrap",
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_align_items": "stretch"
+        },
+        "elements": [
+          {
+            "id": "svccard1",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 31.5,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "16",
+                "size": 16,
+                "unit": "px",
+                "column": "16"
+              },
+              "css_classes": "abex-reveal",
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start"
+            },
+            "elements": [
+              {
+                "id": "svcimg1",
+                "elType": "widget",
+                "settings": {
+                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-project-management-systems.jpg\" alt=\"Project management systems and controls\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
+                  "_element_custom_width": {
+                    "size": 100,
+                    "unit": "%"
+                  },
+                  "_element_width": "initial"
+                },
+                "elements": [],
+                "widgetType": "html"
+              },
+              {
+                "id": "svcttl1",
+                "elType": "widget",
+                "settings": {
+                  "title": "Project management systems and controls",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h3"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "svctxt1",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Systems and controls that keep heavy industry projects on cost, time and quality.</p>",
+                  "text_color": "#D5D8F0",
+                  "_css_classes": "abex-small"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "svcbtn1",
+                "elType": "widget",
+                "settings": {
+                  "link": {
+                    "url": "#",
+                    "nofollow": "",
+                    "is_external": ""
+                  },
+                  "text": "Read more",
+                  "_css_classes": "abex-btn"
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "svccard2",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 31.5,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "16",
+                "size": 16,
+                "unit": "px",
+                "column": "16"
+              },
+              "css_classes": "abex-reveal abex-reveal--d1",
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start"
+            },
+            "elements": [
+              {
+                "id": "svcimg2",
+                "elType": "widget",
+                "settings": {
+                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-construction-planning.jpg\" alt=\"Construction planning and scheduling\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
+                  "_element_custom_width": {
+                    "size": 100,
+                    "unit": "%"
+                  },
+                  "_element_width": "initial"
+                },
+                "elements": [],
+                "widgetType": "html"
+              },
+              {
+                "id": "svcttl2",
+                "elType": "widget",
+                "settings": {
+                  "title": "Construction planning and scheduling",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h3"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "svctxt2",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Planning and scheduling for mining, energy and water infrastructure projects.</p>",
+                  "text_color": "#D5D8F0",
+                  "_css_classes": "abex-small"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "svcbtn2",
+                "elType": "widget",
+                "settings": {
+                  "link": {
+                    "url": "#",
+                    "nofollow": "",
+                    "is_external": ""
+                  },
+                  "text": "Read more",
+                  "_css_classes": "abex-btn"
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "svccard3",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 31.5,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "16",
+                "size": 16,
+                "unit": "px",
+                "column": "16"
+              },
+              "css_classes": "abex-reveal abex-reveal--d2",
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start"
+            },
+            "elements": [
+              {
+                "id": "svcimg3",
+                "elType": "widget",
+                "settings": {
+                  "html": "<div class=\"abex-zoom\" style=\"position:relative;width:100%;overflow:hidden;aspect-ratio:4/3.6;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/svc-contracts-claims.jpg\" alt=\"Contracts and claims management\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;left:0;bottom:0;height:8px;width:100%;background:#E63A2E\"></div></div>",
+                  "_element_custom_width": {
+                    "size": 100,
+                    "unit": "%"
+                  },
+                  "_element_width": "initial"
+                },
+                "elements": [],
+                "widgetType": "html"
+              },
+              {
+                "id": "svcttl3",
+                "elType": "widget",
+                "settings": {
+                  "title": "Contracts and claims management",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h3"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "svctxt3",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Contract administration, claims and dispute resolution.</p>",
+                  "text_color": "#D5D8F0",
+                  "_css_classes": "abex-small"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "svcbtn3",
+                "elType": "widget",
+                "settings": {
+                  "link": {
+                    "url": "#",
+                    "nofollow": "",
+                    "is_external": ""
+                  },
+                  "text": "Read more",
+                  "_css_classes": "abex-btn"
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "svcmarq0",
+        "elType": "container",
+        "settings": {
+          "margin": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "64",
+            "isLinked": false
+          },
+          "padding": {
+            "top": "30",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "30",
+            "isLinked": false
+          },
+          "border_color": "#2F3794",
+          "border_width": {
+            "top": "1",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "1",
+            "isLinked": false
+          },
+          "border_border": "solid",
+          "content_width": "full"
+        },
+        "elements": [
+          {
+            "id": "svcmarqw",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-marquee abex-marquee--sectors\"><div class=\"abex-marquee__track\"><span class=\"abex-marquee__group\"><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 20 12 5l8 15M8 13h8M2 20h20\"></path></svg>Mines and mining</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3 20 8v8l-8 5-8-5V8zM12 3v18M4 8l16 8M20 8 4 16\"></path></svg>Minerals processing</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2 5 14h6l-1 8 8-12h-6z\"></path></svg>Energy generation and transmission</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z\"></path></svg>Water supply and reticulation</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18\"></path></svg>Government</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4v14M8 8h8M5 14a7 7 0 0 0 14 0\"></path></svg>Port authorities</span></span><span class=\"abex-marquee__group\"><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 20 12 5l8 15M8 13h8M2 20h20\"></path></svg>Mines and mining</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3 20 8v8l-8 5-8-5V8zM12 3v18M4 8l16 8M20 8 4 16\"></path></svg>Minerals processing</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2 5 14h6l-1 8 8-12h-6z\"></path></svg>Energy generation and transmission</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z\"></path></svg>Water supply and reticulation</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18\"></path></svg>Government</span><span><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4v14M8 8h8M5 14a7 7 0 0 0 14 0\"></path></svg>Port authorities</span></span></div></div>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "cli00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "120",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "0",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "44",
+        "size": 44,
+        "unit": "px",
+        "column": "44"
+      },
+      "css_classes": "abex",
+      "content_width": "boxed",
+      "flex_direction": "column"
+    },
+    "elements": [
+      {
+        "id": "clihead",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "20",
+            "size": 64,
+            "unit": "px",
+            "column": "64"
+          },
+          "flex_wrap": "wrap",
+          "css_classes": "abex-reveal",
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_align_items": "flex-end"
+        },
+        "elements": [
+          {
+            "id": "clihl",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 48,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "18",
+                "size": 18,
+                "unit": "px",
+                "column": "18"
+              },
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start"
+            },
+            "elements": [
+              {
+                "id": "clipill",
+                "elType": "widget",
+                "settings": {
+                  "title": "Clientele",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "clih2",
+                "elType": "widget",
+                "settings": {
+                  "title": "Heavy industry is where we work",
+                  "header_size": "h2",
+                  "title_color": "#12152E",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "clihr",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>Examples where we have worked include mines/mining, minerals processing, energy generation and transmission, water supply and reticulation.</p>",
+              "_css_classes": "abex-body",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 44,
+                "unit": "%"
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "cligrid",
+        "elType": "widget",
+        "settings": {
+          "html": "<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px\"><a class=\"abex-sector abex-zoom abex-reveal\" href=\"#contact\" style=\"display:block;aspect-ratio:3/4;text-decoration:none\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/sector-mines-and-mining.jpg\" alt=\"Mines and mining\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0\"><span style=\"position:absolute;top:20px;right:20px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 10px\">01</span><span style=\"position:absolute;left:24px;right:24px;bottom:24px;display:grid;gap:10px\"><strong style=\"font-family:Archivo,sans-serif;font-weight:600;font-size:22px;line-height:1.2\">Mines and mining</strong><span style=\"font-size:14px;line-height:1.55;color:#D5D8F0\">Surface and underground operations, including mineral sands.</span></span></a><a class=\"abex-sector abex-zoom abex-reveal abex-reveal--d1\" href=\"#contact\" style=\"display:block;aspect-ratio:3/4;text-decoration:none\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/sector-minerals-processing.jpg\" alt=\"Minerals processing\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0\"><span style=\"position:absolute;top:20px;right:20px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 10px\">02</span><span style=\"position:absolute;left:24px;right:24px;bottom:24px;display:grid;gap:10px\"><strong style=\"font-family:Archivo,sans-serif;font-weight:600;font-size:22px;line-height:1.2\">Minerals processing</strong><span style=\"font-size:14px;line-height:1.55;color:#D5D8F0\">Processing plants and the systems that support them.</span></span></a><a class=\"abex-sector abex-zoom abex-reveal abex-reveal--d2\" href=\"#contact\" style=\"display:block;aspect-ratio:3/4;text-decoration:none\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/sector-energy-generation.jpg\" alt=\"Energy generation and transmission\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0\"><span style=\"position:absolute;top:20px;right:20px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 10px\">03</span><span style=\"position:absolute;left:24px;right:24px;bottom:24px;display:grid;gap:10px\"><strong style=\"font-family:Archivo,sans-serif;font-weight:600;font-size:22px;line-height:1.2\">Energy generation and transmission</strong><span style=\"font-size:14px;line-height:1.55;color:#D5D8F0\">Power generators and transmission businesses.</span></span></a><a class=\"abex-sector abex-zoom abex-reveal abex-reveal--d3\" href=\"#contact\" style=\"display:block;aspect-ratio:3/4;text-decoration:none\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/sector-water-supply.jpg\" alt=\"Water supply and reticulation\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0\"><span style=\"position:absolute;top:20px;right:20px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 10px\">04</span><span style=\"position:absolute;left:24px;right:24px;bottom:24px;display:grid;gap:10px\"><strong style=\"font-family:Archivo,sans-serif;font-weight:600;font-size:22px;line-height:1.2\">Water supply and reticulation</strong><span style=\"font-size:14px;line-height:1.55;color:#D5D8F0\">Water infrastructure from supply to distribution.</span></span></a></div>"
+        },
+        "elements": [],
+        "widgetType": "html"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "tst00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "120",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "120",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "48",
+        "size": 48,
+        "unit": "px",
+        "column": "48"
+      },
+      "css_classes": "abex",
+      "content_width": "boxed",
+      "flex_direction": "column"
+    },
+    "elements": [
+      {
+        "id": "tsthead",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "20",
+            "size": 64,
+            "unit": "px",
+            "column": "64"
+          },
+          "flex_wrap": "wrap",
+          "css_classes": "abex-reveal",
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_align_items": "flex-end"
+        },
+        "elements": [
+          {
+            "id": "tsthl",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 48,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "18",
+                "size": 18,
+                "unit": "px",
+                "column": "18"
+              },
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start"
+            },
+            "elements": [
+              {
+                "id": "tstpill",
+                "elType": "widget",
+                "settings": {
+                  "title": "Our Commitment",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "tsth2",
+                "elType": "widget",
+                "settings": {
+                  "title": "How we want our clients to see us",
+                  "header_size": "h2",
+                  "title_color": "#12152E",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "tsthr",
+            "elType": "widget",
+            "settings": {
+              "editor": "<p>We work across heavy industry, including mines and mining, minerals processing, energy generation and transmission, and water supply and reticulation.</p>",
+              "_css_classes": "abex-small",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 44,
+                "unit": "%"
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "tstbody",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "40",
+            "size": 72,
+            "unit": "px",
+            "column": "72"
+          },
+          "flex_wrap": "wrap",
+          "content_width": "full",
+          "flex_direction": "row",
+          "flex_align_items": "center"
+        },
+        "elements": [
+          {
+            "id": "tstimg",
+            "elType": "widget",
+            "settings": {
+              "image": {
+                "id": 20,
+                "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/commitment-substation-inspection.jpg"
+              },
+              "image_size": "full",
+              "_css_classes": "abex-reveal",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 36,
+                "unit": "%"
+              }
+            },
+            "elements": [],
+            "widgetType": "image"
+          },
+          {
+            "id": "tstcol",
+            "elType": "container",
+            "settings": {
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "24",
+                "size": 24,
+                "unit": "px",
+                "column": "24"
+              },
+              "_flex_grow": 1,
+              "css_classes": "abex-reveal abex-reveal--d1",
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "width": {
+                "size": 54,
+                "unit": "%"
+              }
+            },
+            "elements": [
+              {
+                "id": "tstkick",
+                "elType": "widget",
+                "settings": {
+                  "html": "<span style=\"display:block;font-size:13px;color:#4A4F6A;border-bottom:1px solid #E4E1DA;padding-bottom:14px;max-width:340px\">Responsive. Reliable. Good value.</span>"
+                },
+                "elements": [],
+                "widgetType": "html"
+              },
+              {
+                "id": "tstq",
+                "elType": "widget",
+                "settings": {
+                  "title": "“We want our clients to see us as responsive, reliable, responsible, good value and giving consideration to all stakeholders.”",
+                  "header_size": "p",
+                  "title_color": "#12152E",
+                  "_css_classes": "abex-quote abex-quote--sm"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "tstattr",
+                "elType": "widget",
+                "settings": {
+                  "html": "<div style=\"display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;width:100%\"><span style=\"display:grid;gap:2px\"><strong style=\"font-size:15px\">Charles Pywell</strong><span style=\"font-size:13px;color:#4A4F6A\">ABEX Management Services</span></span><span style=\"font-family:Archivo,sans-serif;font-weight:900;font-size:64px;line-height:.5;color:#E63A2E\">&rdquo;</span></div>"
+                },
+                "elements": [],
+                "widgetType": "html"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "sta00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "48",
+        "unit": "px",
+        "right": "48",
+        "bottom": "112",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "28",
+        "size": 28,
+        "unit": "px",
+        "column": "28"
+      },
+      "flex_wrap": "wrap",
+      "css_classes": "abex abex-reveal",
+      "content_width": "boxed",
+      "flex_direction": "row",
+      "flex_align_items": "center"
+    },
+    "elements": [
+      {
+        "id": "stah",
+        "elType": "widget",
+        "settings": {
+          "title": "Our track record",
+          "header_size": "h2",
+          "title_color": "#12152E",
+          "_css_classes": "abex-h3",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "size": 22,
+            "unit": "%"
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "stab",
+        "elType": "widget",
+        "settings": {
+          "html": "<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:28px\"><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">40<em>+</em></span><span style=\"font-size:14px\">Years experience</span></div></div><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">9</span><span style=\"font-size:14px\">Client sectors</span></div></div><div class=\"abex-stat\"><div style=\"display:grid;gap:6px;text-align:center\"><span class=\"abex-stat__n\">QLD</span><span style=\"font-size:14px\">Based in Queensland</span></div></div></div>",
+          "_element_width": "initial",
+          "_element_custom_width": {
+            "size": 74,
+            "unit": "%"
+          }
+        },
+        "elements": [],
+        "widgetType": "html"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ban00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "40",
+        "isLinked": false
+      },
+      "min_height": {
+        "size": 480,
+        "unit": "px"
+      },
+      "css_classes": "abex",
+      "content_width": "full",
+      "flex_direction": "column",
+      "background_size": "cover",
+      "background_image": {
+        "id": 21,
+        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/banner-hydroelectric-dam.jpg"
+      },
+      "background_position": "center center",
+      "flex_justify_content": "flex-end",
+      "background_background": "classic"
+    },
+    "elements": [
+      {
+        "id": "baninner",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "0",
+            "left": "48",
+            "unit": "px",
+            "right": "48",
+            "bottom": "0",
+            "isLinked": false
+          },
+          "content_width": "boxed",
+          "flex_direction": "row",
+          "flex_align_items": "flex-end"
+        },
+        "elements": [
+          {
+            "id": "banplate",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-reveal\" style=\"background:rgba(11,16,80,.88);color:#fff;padding:clamp(22px,3vw,32px) clamp(22px,3vw,40px) clamp(22px,3vw,32px) 0;display:flex;gap:24px;align-items:center;max-width:720px\"><span style=\"flex:none;width:84px;height:84px;background:#E63A2E;border-radius:50%;display:grid;place-items:center;margin-left:-20px;font-size:28px\">&rarr;</span><p style=\"margin:0;font-family:Archivo,sans-serif;font-stretch:108%;font-weight:600;font-size:clamp(22px,2.6vw,34px);line-height:1.2\">Management expertise for all project and business phases</p></div>"
+            },
+            "elements": [],
+            "widgetType": "html"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "pnlhead0",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "120",
+        "left": "40",
+        "unit": "px",
+        "right": "40",
+        "bottom": "40",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "14",
+        "size": 14,
+        "unit": "px",
+        "column": "14"
+      },
+      "css_classes": "abex abex-reveal",
+      "content_width": "boxed",
+      "flex_direction": "column",
+      "flex_align_items": "flex-start"
+    },
+    "elements": [
+      {
+        "id": "pnlpill",
+        "elType": "widget",
+        "settings": {
+          "title": "How We Work",
+          "header_size": "div",
+          "_css_classes": "abex-pill"
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "pnlh2",
+        "elType": "widget",
+        "settings": {
+          "title": "Our business model, values and approach",
+          "header_size": "h2",
+          "title_color": "#12152E",
+          "_css_classes": "abex-h2"
+        },
+        "elements": [],
+        "widgetType": "heading"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "pnlstack",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "40",
+        "unit": "px",
+        "right": "40",
+        "bottom": "160",
+        "isLinked": false
+      },
+      "flex_gap": {
+        "row": "80",
+        "size": 80,
+        "unit": "px",
+        "column": "80"
+      },
+      "css_classes": "abex abex-stack",
+      "content_width": "boxed",
+      "flex_direction": "column"
+    },
+    "elements": [
+      {
+        "id": "pnl1",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "56",
+            "left": "56",
+            "unit": "px",
+            "right": "56",
+            "bottom": "56",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "40",
+            "size": 56,
+            "unit": "px",
+            "column": "56"
+          },
+          "flex_wrap": "wrap",
+          "css_classes": "abex-panel abex-reveal",
+          "content_width": "full",
+          "flex_direction": "row",
+          "background_color": "#F5F2EC",
+          "flex_align_items": "stretch",
+          "background_background": "classic"
+        },
+        "elements": [
+          {
+            "id": "9699b52",
+            "elType": "widget",
+            "settings": {
+              "html": "<svg class=\"abex-panel__lines\" viewBox=\"0 0 600 400\" preserveAspectRatio=\"none\" fill=\"none\" stroke=\"#E2DCD0\" stroke-width=\"1\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M360 400 Q 150 180 -40 0\"/><path d=\"M360 400 Q 172 172 -10 0\"/><path d=\"M360 400 Q 194 164 20 0\"/><path d=\"M360 400 Q 216 156 50 0\"/><path d=\"M360 400 Q 238 148 80 0\"/><path d=\"M360 400 Q 260 140 110 0\"/><path d=\"M360 400 Q 282 132 140 0\"/><path d=\"M360 400 Q 304 124 170 0\"/><path d=\"M360 400 Q 326 116 200 0\"/><path d=\"M360 400 Q 348 108 230 0\"/><path d=\"M360 400 Q 370 100 260 0\"/><path d=\"M360 400 Q 392 92 290 0\"/><circle cx=\"80\" cy=\"-60\" r=\"260\"/></svg>",
+              "_css_classes": "abex-panel__lineswrap"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "pnl1txt",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 48,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "20",
+                "size": 20,
+                "unit": "px",
+                "column": "20"
+              },
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_justify_content": "center"
+            },
+            "elements": [
+              {
+                "id": "pnl1pill",
+                "elType": "widget",
+                "settings": {
+                  "title": "Business Model",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "pnl1h",
+                "elType": "widget",
+                "settings": {
+                  "title": "Management Perspective",
+                  "header_size": "h2",
+                  "title_color": "#12152E",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "pnl1p",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Our business model is to provide the management required to deliver successful and sustainable outcomes for our clients. Using this model, our activities encompass:</p>",
+                  "_css_classes": "abex-small"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "pnl1list",
+                "elType": "widget",
+                "settings": {
+                  "html": "<ul style=\"margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0 28px;border-top:1px solid #E2DCD0\"><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Options analysis</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Feasibility studies</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Funding applications</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Procurement</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Contracts management</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Planning and scheduling for cost, time, quality</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Health, safety, environment and community assessment</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Organisational design and development</li><li style=\"display:flex;gap:12px;align-items:baseline;font-size:14px;line-height:1.4;padding:11px 0;border-bottom:1px solid #E2DCD0\"><span style=\"flex:none;width:10px;height:6px;background:#E63A2E;transform:skewX(-24deg)\"></span>Claims and disputes</li></ul>"
+                },
+                "elements": [],
+                "widgetType": "html"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "pnl1img",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-transmission-towers.jpg\" alt=\"Transmission towers\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Successful and sustainable outcomes</span></div>",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 44,
+                "unit": "%"
+              }
+            },
+            "elements": [],
+            "widgetType": "html"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "pnl2",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "56",
+            "left": "56",
+            "unit": "px",
+            "right": "56",
+            "bottom": "56",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "40",
+            "size": 56,
+            "unit": "px",
+            "column": "56"
+          },
+          "flex_wrap": "wrap",
+          "css_classes": "abex-panel abex-reveal",
+          "content_width": "full",
+          "flex_direction": "row",
+          "background_color": "#141B7A",
+          "flex_align_items": "stretch",
+          "background_background": "classic"
+        },
+        "elements": [
+          {
+            "id": "61ad350",
+            "elType": "widget",
+            "settings": {
+              "html": "<svg class=\"abex-panel__lines\" viewBox=\"0 0 600 400\" preserveAspectRatio=\"none\" fill=\"none\" stroke=\"#2A3290\" stroke-width=\"1\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M360 400 Q 150 180 -40 0\"/><path d=\"M360 400 Q 172 172 -10 0\"/><path d=\"M360 400 Q 194 164 20 0\"/><path d=\"M360 400 Q 216 156 50 0\"/><path d=\"M360 400 Q 238 148 80 0\"/><path d=\"M360 400 Q 260 140 110 0\"/><path d=\"M360 400 Q 282 132 140 0\"/><path d=\"M360 400 Q 304 124 170 0\"/><path d=\"M360 400 Q 326 116 200 0\"/><path d=\"M360 400 Q 348 108 230 0\"/><path d=\"M360 400 Q 370 100 260 0\"/><path d=\"M360 400 Q 392 92 290 0\"/><circle cx=\"80\" cy=\"-60\" r=\"260\"/></svg>",
+              "_css_classes": "abex-panel__lineswrap"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "pnl2img",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-container-port.jpg\" alt=\"Container port with cranes\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Value for all stakeholders</span></div>",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 44,
+                "unit": "%"
+              }
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "pnl2txt",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 48,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "20",
+                "size": 20,
+                "unit": "px",
+                "column": "20"
+              },
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_justify_content": "center"
+            },
+            "elements": [
+              {
+                "id": "pnl2pill",
+                "elType": "widget",
+                "settings": {
+                  "title": "Our Values",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill abex-pill--onnavy",
+                  "title_color": "#FFFFFF"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "pnl2h",
+                "elType": "widget",
+                "settings": {
+                  "title": "Innovative quality services",
+                  "header_size": "h2",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "pnl2p",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>We strive to provide innovative quality services that:</p>",
+                  "text_color": "#D5D8F0",
+                  "_css_classes": "abex-small"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "pnl2rings",
+                "elType": "widget",
+                "settings": {
+                  "html": "<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:20px;color:#fff\"><div style=\"display:flex;gap:14px;align-items:center\"><div class=\"abex-ring\"><svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><circle class=\"abex-ring__track\" cx=\"30\" cy=\"30\" r=\"27\"></circle><circle class=\"abex-ring__arc\" cx=\"30\" cy=\"30\" r=\"27\"></circle></svg><span class=\"abex-ring__n\">01</span></div><span style=\"font-size:15px;line-height:1.4;font-weight:500\">Exceed our clients&rsquo; expectations</span></div><div style=\"display:flex;gap:14px;align-items:center\"><div class=\"abex-ring\"><svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><circle class=\"abex-ring__track\" cx=\"30\" cy=\"30\" r=\"27\"></circle><circle class=\"abex-ring__arc\" cx=\"30\" cy=\"30\" r=\"27\"></circle></svg><span class=\"abex-ring__n\">02</span></div><span style=\"font-size:15px;line-height:1.4;font-weight:500\">Deliver exceptional value for money</span></div><div style=\"display:flex;gap:14px;align-items:center\"><div class=\"abex-ring\"><svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><circle class=\"abex-ring__track\" cx=\"30\" cy=\"30\" r=\"27\"></circle><circle class=\"abex-ring__arc\" cx=\"30\" cy=\"30\" r=\"27\"></circle></svg><span class=\"abex-ring__n\">03</span></div><span style=\"font-size:15px;line-height:1.4;font-weight:500\">Give consideration to all stakeholders</span></div><div style=\"display:flex;gap:14px;align-items:center\"><div class=\"abex-ring\"><svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><circle class=\"abex-ring__track\" cx=\"30\" cy=\"30\" r=\"27\"></circle><circle class=\"abex-ring__arc\" cx=\"30\" cy=\"30\" r=\"27\"></circle></svg><span class=\"abex-ring__n\">04</span></div><span style=\"font-size:15px;line-height:1.4;font-weight:500\">Are responsive, responsible, and reliable</span></div></div>"
+                },
+                "elements": [],
+                "widgetType": "html"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "pnl3",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "56",
+            "left": "56",
+            "unit": "px",
+            "right": "56",
+            "bottom": "56",
+            "isLinked": true
+          },
+          "flex_gap": {
+            "row": "40",
+            "size": 56,
+            "unit": "px",
+            "column": "56"
+          },
+          "flex_wrap": "wrap",
+          "css_classes": "abex-panel abex-reveal",
+          "content_width": "full",
+          "flex_direction": "row",
+          "background_color": "#F5F2EC",
+          "flex_align_items": "stretch",
+          "background_background": "classic"
+        },
+        "elements": [
+          {
+            "id": "f9744d5",
+            "elType": "widget",
+            "settings": {
+              "html": "<svg class=\"abex-panel__lines\" viewBox=\"0 0 600 400\" preserveAspectRatio=\"none\" fill=\"none\" stroke=\"#E2DCD0\" stroke-width=\"1\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M360 400 Q 150 180 -40 0\"/><path d=\"M360 400 Q 172 172 -10 0\"/><path d=\"M360 400 Q 194 164 20 0\"/><path d=\"M360 400 Q 216 156 50 0\"/><path d=\"M360 400 Q 238 148 80 0\"/><path d=\"M360 400 Q 260 140 110 0\"/><path d=\"M360 400 Q 282 132 140 0\"/><path d=\"M360 400 Q 304 124 170 0\"/><path d=\"M360 400 Q 326 116 200 0\"/><path d=\"M360 400 Q 348 108 230 0\"/><path d=\"M360 400 Q 370 100 260 0\"/><path d=\"M360 400 Q 392 92 290 0\"/><circle cx=\"80\" cy=\"-60\" r=\"260\"/></svg>",
+              "_css_classes": "abex-panel__lineswrap"
+            },
+            "elements": [],
+            "widgetType": "html"
+          },
+          {
+            "id": "pnl3txt",
+            "elType": "container",
+            "settings": {
+              "width": {
+                "size": 48,
+                "unit": "%"
+              },
+              "padding": {
+                "top": "0",
+                "left": "0",
+                "unit": "px",
+                "right": "0",
+                "bottom": "0",
+                "isLinked": true
+              },
+              "flex_gap": {
+                "row": "20",
+                "size": 20,
+                "unit": "px",
+                "column": "20"
+              },
+              "content_width": "full",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "flex_justify_content": "center"
+            },
+            "elements": [
+              {
+                "id": "pnl3pill",
+                "elType": "widget",
+                "settings": {
+                  "title": "Our Approach",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "pnl3h",
+                "elType": "widget",
+                "settings": {
+                  "title": "Resources matched to every engagement",
+                  "header_size": "h2",
+                  "title_color": "#12152E",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "pnl3p",
+                "elType": "widget",
+                "settings": {
+                  "editor": "<p>Our services range from specific short-term assignments through to long-term and extensive provision of resources and teams.</p>",
+                  "_css_classes": "abex-small"
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              },
+              {
+                "id": "pnl3met",
+                "elType": "widget",
+                "settings": {
+                  "html": "<div style=\"display:grid;gap:18px;padding:6px 0;width:100%\"><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Specific short-term assignments</span><span>Weeks</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:34%\"></div></div></div><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Long-term provision of resources</span><span>Months</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:68%\"></div></div></div><div class=\"abex-meter\"><div class=\"abex-meter__row\"><span>Extensive provision of teams</span><span>Years</span></div><div class=\"abex-meter__bar\"><div class=\"abex-meter__fill\" style=\"--w:100%\"></div></div></div></div><p style=\"margin:18px 0 0;font-family:Archivo,sans-serif;font-weight:500;font-size:17px;line-height:1.5;border-left:3px solid #E63A2E;padding-left:16px\">&ldquo;Our objective is to deliver quality services utilising the appropriate resources and tools.&rdquo;</p>"
+                },
+                "elements": [],
+                "widgetType": "html"
+              },
+              {
+                "id": "pnl3cta",
+                "elType": "widget",
+                "settings": {
+                  "link": {
+                    "url": "#contact",
+                    "nofollow": "",
+                    "is_external": ""
+                  },
+                  "text": "Discuss your project",
+                  "_css_classes": "abex-btn"
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "pnl3img",
+            "elType": "widget",
+            "settings": {
+              "html": "<div class=\"abex-zoom\" style=\"position:relative;overflow:hidden;min-height:360px;height:100%;background:#0B1050\"><img src=\"https://abex-management.wsdfy.com/wp-content/uploads/2026/11/panel-mining-truck.jpg\" alt=\"Mining truck in an open-pit mine\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover\"><div style=\"position:absolute;inset:0;background:linear-gradient(to top,rgba(11,16,80,.85) 0%,rgba(11,16,80,.25) 45%,rgba(230,58,46,.12) 100%)\"></div><div style=\"position:absolute;left:0;top:0;width:10px;height:38%;background:#E63A2E\"></div><span style=\"position:absolute;left:20px;bottom:18px;color:#fff;font-family:Archivo,sans-serif;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center\"><span style=\"width:14px;height:8px;background:#E63A2E;transform:skewX(-24deg)\"></span>Short-term to long-term</span></div>",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 44,
+                "unit": "%"
+              }
+            },
+            "elements": [],
+            "widgetType": "html"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "con00001",
+    "elType": "container",
+    "settings": {
+      "padding": {
+        "top": "0",
+        "left": "0",
+        "unit": "px",
+        "right": "0",
+        "bottom": "0",
+        "isLinked": true
+      },
+      "flex_gap": {
+        "row": "0",
+        "size": 0,
+        "unit": "px",
+        "column": "0"
+      },
+      "flex_wrap": "wrap",
+      "_element_id": "contact",
+      "css_classes": "abex",
+      "content_width": "full",
+      "flex_direction": "row",
+      "background_color": "#FFFFFF",
+      "flex_align_items": "stretch",
+      "background_background": "classic"
+    },
+    "elements": [
+      {
+        "id": "conimg",
+        "elType": "container",
+        "settings": {
+          "width": {
+            "size": 44,
+            "unit": "%"
+          },
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "unit": "px",
+            "right": "0",
+            "bottom": "0",
+            "isLinked": true
+          },
+          "min_height": {
+            "size": 420,
+            "unit": "px"
+          },
+          "content_width": "full",
+          "background_size": "cover",
+          "background_image": {
+            "id": 25,
+            "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/contact-industrial-port.jpg"
+          },
+          "background_position": "center center",
+          "background_background": "classic",
+          "css_classes": "abex-fill",
+          "_flex_align_self": "stretch"
+        },
+        "elements": [],
+        "isInner": true
+      },
+      {
+        "id": "confrm",
+        "elType": "container",
+        "settings": {
+          "padding": {
+            "top": "88",
+            "left": "72",
+            "unit": "px",
+            "right": "72",
+            "bottom": "88",
+            "isLinked": false
+          },
+          "flex_gap": {
+            "row": "26",
+            "size": 26,
+            "unit": "px",
+            "column": "26"
+          },
+          "_flex_grow": 1,
+          "css_classes": "abex-reveal",
+          "content_width": "full",
+          "flex_direction": "column",
+          "flex_align_items": "stretch",
+          "flex_justify_content": "center"
+        },
+        "elements": [
+          {
+            "id": "conlead",
+            "elType": "widget",
+            "settings": {
+              "title": "To find out more about how we can help you, contact us today. Fill out the form below and we will be in touch.",
+              "header_size": "p",
+              "title_color": "#12152E",
+              "_css_classes": "abex-h3"
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "b7440bf",
+            "elType": "widget",
+            "settings": {
+              "shortcode": "[abex_enquiry_form]"
+            },
+            "elements": [],
+            "widgetType": "shortcode"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  }
+]
