@@ -2488,3 +2488,10 @@ body .elementor-element.elementor-element-ftrlogo { padding-bottom: 8px !importa
 @media (min-width: 768px) {
   .elementor-element-cligrid .abex-sector > span:last-of-type { height: 116px !important; align-content: start !important; }
 }
+
+
+/* Services index on phones: the shared numbered-list mobile rule set the
+   left padding to 0, so the numbers sat against the border. */
+@media (max-width: 767px) {
+  body .abp-idx.abp-idx .elementor-icon-list-item { padding-left: 16px !important; padding-right: 12px !important; }
+}
