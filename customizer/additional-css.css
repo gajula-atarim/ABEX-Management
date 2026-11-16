@@ -2479,3 +2479,12 @@ body .elementor-element.elementor-element-ftrlogo { padding-bottom: 8px !importa
 @media (max-width: 767px) {
   body .elementor-element-tstq.elementor-element-tstq .elementor-heading-title { font-size: 19px !important; line-height: 1.4 !important; text-wrap: balance !important; }
 }
+
+
+/* Home "Where we work" cards, tablet and desktop: the caption block was
+   anchored to the card bottom, so titles started at different heights when
+   the descriptions ran to different lengths. A fixed caption height with the
+   content top-aligned puts all four titles on one line. */
+@media (min-width: 768px) {
+  .elementor-element-cligrid .abex-sector > span:last-of-type { height: 116px !important; align-content: start !important; }
+}
