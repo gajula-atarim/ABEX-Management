@@ -2495,3 +2495,15 @@ body .elementor-element.elementor-element-ftrlogo { padding-bottom: 8px !importa
 @media (max-width: 767px) {
   body .abp-idx.abp-idx .elementor-icon-list-item { padding-left: 16px !important; padding-right: 12px !important; }
 }
+
+
+/* Home "Where we work" cards: reserve the same number of title lines on
+   every card so the descriptions start level too (2 lines on desktop,
+   3 on tablet, where the titles wrap more). */
+@media (min-width: 1025px) {
+  .elementor-element-cligrid .abex-sector > span:last-of-type strong { min-height: 2.4em !important; }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-element-cligrid .abex-sector > span:last-of-type { height: 150px !important; }
+  .elementor-element-cligrid .abex-sector > span:last-of-type strong { min-height: 3.6em !important; }
+}
