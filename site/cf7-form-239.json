@@ -1,0 +1,15 @@
+{
+  "id": 239,
+  "plugin": "contact-form-7 6.2.5",
+  "title": "ABEX Contact Page Enquiry",
+  "used_on": "Contact Us (page 31), Shortcode widget ct00024",
+  "shortcode": "[contact-form-7 id=\"239\" title=\"ABEX Contact Page Enquiry\" html_class=\"abex-form abex-cf7\"]",
+  "form": "<div class=\"abex-cf7-grid\">\n<div class=\"abex-f abex-f--full\"><label>Your name*\n[text* your-name autocomplete:name placeholder \"Write your name here\"]</label></div>\n<div class=\"abex-f\"><label>Your email*\n[email* your-email autocomplete:email placeholder \"Write your email\"]</label></div>\n<div class=\"abex-f\"><label>Your phone\n[tel your-phone autocomplete:tel placeholder \"Write your phone number\"]</label></div>\n<div class=\"abex-f abex-f--full\"><label>Company\n[text your-company autocomplete:organization placeholder \"Your organisation\"]</label></div>\n<div class=\"abex-f abex-f--full\"><label>Message\n[textarea your-message x4 placeholder \"Tell us about your project or business\"]</label></div>\n</div>\n[submit class:abex-cf7-submit \"Send message\"]",
+  "mail": {
+    "recipient": "test@gmail.com (test address on purpose; change before launch)",
+    "subject": "Website enquiry from [your-name]",
+    "reply_to": "[your-name] <[your-email]>"
+  },
+  "mail_2": "inactive",
+  "styling": "customizer/additional-css.css, rules under .abex-cf7"
+}

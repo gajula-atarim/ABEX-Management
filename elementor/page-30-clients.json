@@ -1,0 +1,798 @@
+[
+  {
+    "id": "cl00005",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-hero abex-underbar",
+      "background_background": "classic",
+      "background_image": {
+        "id": 228,
+        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-container-port-cranes-scaled.jpg",
+        "source": "library"
+      },
+      "background_size": "cover",
+      "background_position": "center 60%",
+      "background_color": "#0B1050",
+      "background_overlay_background": "gradient",
+      "background_overlay_color": "rgba(11,16,80,0.94)",
+      "background_overlay_color_stop": {
+        "unit": "%",
+        "size": 0
+      },
+      "background_overlay_color_b": "rgba(11,16,80,0.2)",
+      "background_overlay_color_b_stop": {
+        "unit": "%",
+        "size": 100
+      },
+      "background_overlay_gradient_type": "linear",
+      "background_overlay_gradient_angle": {
+        "unit": "deg",
+        "size": 90
+      },
+      "background_overlay_opacity": {
+        "size": 1,
+        "sizes": [],
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "cl00004",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-hero__in"
+        },
+        "elements": [
+          {
+            "id": "cl00001",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p><a href=\"/\">Home</a> <strong>Clients</strong></p>",
+              "text_color": "#D5D8F0",
+              "_css_classes": "abp-crumb"
+            },
+            "elements": []
+          },
+          {
+            "id": "cl00002",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Clients",
+              "header_size": "h1",
+              "title_color": "#FFFFFF",
+              "_css_classes": "abex-h1 abp-h1"
+            },
+            "elements": []
+          },
+          {
+            "id": "cl00003",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p>ABEX Management Services’ client sectors have included:</p>",
+              "text_color": "#FFFFFF",
+              "_css_classes": "abex-lead abp-hero__lead",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 600,
+                "sizes": [],
+                "unit": "px"
+              },
+              "_element_custom_width_mobile": {
+                "size": 100,
+                "sizes": [],
+                "unit": "%"
+              }
+            },
+            "elements": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cl00011",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-cap abex-wedge"
+    },
+    "elements": [
+      {
+        "id": "cl00010",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-cap__in",
+          "flex_direction": "row"
+        },
+        "elements": [
+          {
+            "id": "cl00006",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "&ldquo;",
+              "header_size": "div",
+              "_css_classes": "abp-qmark"
+            },
+            "elements": []
+          },
+          {
+            "id": "cl00009",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-cap__txt"
+            },
+            "elements": [
+              {
+                "id": "cl00007",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "We want our clients to see us as responsive, reliable, responsible, good value and giving consideration to all stakeholders.",
+                  "header_size": "p",
+                  "_css_classes": "abex-quote"
+                },
+                "elements": []
+              },
+              {
+                "id": "cl00008",
+                "elType": "widget",
+                "widgetType": "spacer",
+                "settings": {
+                  "space": {
+                    "unit": "px",
+                    "size": 8
+                  },
+                  "_css_classes": "abex-rule"
+                },
+                "elements": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cl00055",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-sec abp-sec--md"
+    },
+    "elements": [
+      {
+        "id": "cl00054",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-stack44"
+        },
+        "elements": [
+          {
+            "id": "cl00016",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-head"
+            },
+            "elements": [
+              {
+                "id": "cl00014",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-head__l"
+                },
+                "elements": [
+                  {
+                    "id": "cl00012",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Client Sectors",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00013",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "ABEX Management Services’ client sectors have included:",
+                      "header_size": "h2",
+                      "_css_classes": "abex-h2"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00015",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p>Examples include mines/mining, minerals processing, energy generation and transmission, water supply and reticulation.</p>",
+                  "_css_classes": "abex-body abp-head__p"
+                },
+                "elements": []
+              }
+            ]
+          },
+          {
+            "id": "cl00053",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-g3"
+            },
+            "elements": [
+              {
+                "id": "cl00020",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00017",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 223,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-open-pit-aerial.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00018",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "01",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00019",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Metalliferous mines – surface and underground",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00024",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00021",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 227,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-open-cut-workings-aerial.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00022",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "02",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00023",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Mineral sands mines",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00028",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00025",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 229,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-office-team-meeting.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00026",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "03",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00027",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Government and government-owned enterprises",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00032",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00029",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 230,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-port-crane-ship-scaled.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00030",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "04",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00031",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Port authorities",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00036",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00033",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 220,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-transmission-towers-dusk.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00034",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "05",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00035",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Power generators and transmission businesses",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00040",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00037",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 224,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-minerals-processing-plant.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00038",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "06",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00039",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Fabrication contractors",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00044",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00041",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 222,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-bucket-wheel-excavator.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00042",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "07",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00043",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Construction contractors",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00048",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00045",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 231,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-contract-signing.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00046",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "08",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00047",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Legal firms",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              },
+              {
+                "id": "cl00052",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-card abex-zoom abp-card--sec"
+                },
+                "elements": [
+                  {
+                    "id": "cl00049",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 232,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-substation-inspection.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00050",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "09",
+                      "header_size": "span",
+                      "_css_classes": "abp-card__n"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "cl00051",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Consulting engineers",
+                      "header_size": "h3",
+                      "title_color": "#FFFFFF",
+                      "_css_classes": "abp-card__t"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cl00061",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-cta",
+      "background_background": "classic",
+      "background_image": {
+        "id": 233,
+        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-terraced-open-pit.jpg",
+        "source": "library"
+      },
+      "background_size": "cover",
+      "background_position": "center center",
+      "background_color": "#0B1050",
+      "background_overlay_background": "gradient",
+      "background_overlay_color": "rgba(11,16,80,0.96)",
+      "background_overlay_color_stop": {
+        "unit": "%",
+        "size": 0
+      },
+      "background_overlay_color_b": "rgba(20,27,122,0.72)",
+      "background_overlay_color_b_stop": {
+        "unit": "%",
+        "size": 100
+      },
+      "background_overlay_gradient_type": "linear",
+      "background_overlay_gradient_angle": {
+        "unit": "deg",
+        "size": 90
+      },
+      "background_overlay_opacity": {
+        "size": 1,
+        "sizes": [],
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "cl00060",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-cta__in",
+          "flex_direction": "row"
+        },
+        "elements": [
+          {
+            "id": "cl00058",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-cta__txt"
+            },
+            "elements": [
+              {
+                "id": "cl00056",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "How can we help you?",
+                  "header_size": "h2",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": []
+              },
+              {
+                "id": "cl00057",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p>Focused on providing management expertise for all project and business phases.</p>",
+                  "text_color": "#D5D8F0",
+                  "_css_classes": "abp-cta__p"
+                },
+                "elements": []
+              }
+            ]
+          },
+          {
+            "id": "cl00059",
+            "elType": "widget",
+            "widgetType": "button",
+            "settings": {
+              "text": "Contact us",
+              "link": {
+                "url": "/contact/",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "_css_classes": "abex-btn"
+            },
+            "elements": []
+          }
+        ]
+      }
+    ]
+  }
+]

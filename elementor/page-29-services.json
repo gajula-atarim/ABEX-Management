@@ -1,0 +1,2105 @@
+[
+  {
+    "id": "sv00157",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-hero abex-underbar",
+      "background_background": "classic",
+      "background_image": {
+        "id": 227,
+        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-open-cut-workings-aerial.jpg",
+        "source": "library"
+      },
+      "background_size": "cover",
+      "background_position": "center center",
+      "background_color": "#0B1050",
+      "background_overlay_background": "gradient",
+      "background_overlay_color": "rgba(11,16,80,0.94)",
+      "background_overlay_color_stop": {
+        "unit": "%",
+        "size": 0
+      },
+      "background_overlay_color_b": "rgba(11,16,80,0.2)",
+      "background_overlay_color_b_stop": {
+        "unit": "%",
+        "size": 100
+      },
+      "background_overlay_gradient_type": "linear",
+      "background_overlay_gradient_angle": {
+        "unit": "deg",
+        "size": 90
+      },
+      "background_overlay_opacity": {
+        "size": 1,
+        "sizes": [],
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "sv00156",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-hero__in"
+        },
+        "elements": [
+          {
+            "id": "sv00153",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p><a href=\"/\">Home</a> <strong>Services</strong></p>",
+              "text_color": "#D5D8F0",
+              "_css_classes": "abp-crumb"
+            },
+            "elements": []
+          },
+          {
+            "id": "sv00154",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Services",
+              "header_size": "h1",
+              "title_color": "#FFFFFF",
+              "_css_classes": "abex-h1 abp-h1"
+            },
+            "elements": []
+          },
+          {
+            "id": "sv00155",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p>Our services range from specific short-term assignments through to longer-term provision of resources and client-embedded or external teams.</p>",
+              "text_color": "#FFFFFF",
+              "_css_classes": "abex-lead abp-hero__lead",
+              "_element_width": "initial",
+              "_element_custom_width": {
+                "size": 600,
+                "sizes": [],
+                "unit": "px"
+              },
+              "_element_custom_width_mobile": {
+                "size": 100,
+                "sizes": [],
+                "unit": "%"
+              }
+            },
+            "elements": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sv00163",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-cap abex-wedge"
+    },
+    "elements": [
+      {
+        "id": "sv00162",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-cap__in",
+          "flex_direction": "row"
+        },
+        "elements": [
+          {
+            "id": "sv00158",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "&ldquo;",
+              "header_size": "div",
+              "_css_classes": "abp-qmark"
+            },
+            "elements": []
+          },
+          {
+            "id": "sv00161",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-cap__txt"
+            },
+            "elements": [
+              {
+                "id": "sv00159",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "Our objective is to deliver quality services utilising the appropriate resources and tools.",
+                  "header_size": "p",
+                  "_css_classes": "abex-quote"
+                },
+                "elements": []
+              },
+              {
+                "id": "sv00160",
+                "elType": "widget",
+                "widgetType": "spacer",
+                "settings": {
+                  "space": {
+                    "unit": "px",
+                    "size": 8
+                  },
+                  "_css_classes": "abex-rule"
+                },
+                "elements": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sv00168",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-sec abp-sec--intro"
+    },
+    "elements": [
+      {
+        "id": "sv00167",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap"
+        },
+        "elements": [
+          {
+            "id": "sv00166",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-head__l"
+            },
+            "elements": [
+              {
+                "id": "sv00164",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "What We Do",
+                  "header_size": "div",
+                  "_css_classes": "abex-pill"
+                },
+                "elements": []
+              },
+              {
+                "id": "sv00165",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "The types of services we can provide",
+                  "header_size": "h2",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sv00179",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-sec--idx"
+    },
+    "elements": [
+      {
+        "id": "sv00178",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap"
+        },
+        "elements": [
+          {
+            "id": "sv00177",
+            "elType": "widget",
+            "widgetType": "icon-list",
+            "settings": {
+              "icon_list": [
+                {
+                  "_id": "sv00169",
+                  "text": "Project management systems and controls",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-1",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00170",
+                  "text": "Business and organisation planning and development",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-2",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00171",
+                  "text": "Project planning and scheduling",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-3",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00172",
+                  "text": "Procurement management",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-4",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00173",
+                  "text": "Contracts Management",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-5",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00174",
+                  "text": "Dispute resolution – negotiation, arbitration, litigation scenarios",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-6",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00175",
+                  "text": "Audits",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-7",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                },
+                {
+                  "_id": "sv00176",
+                  "text": "Concept review, estimates and scheduling",
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "link": {
+                    "url": "#svc-8",
+                    "is_external": "",
+                    "nofollow": ""
+                  }
+                }
+              ],
+              "view": "traditional",
+              "_css_classes": "abp-numlist abp-idx"
+            },
+            "elements": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sv00181",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-sec--arts"
+    },
+    "elements": [
+      {
+        "id": "sv00180",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-arts"
+        },
+        "elements": [
+          {
+            "id": "sv00019",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art",
+              "_element_id": "svc-1"
+            },
+            "elements": [
+              {
+                "id": "sv00005",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00001",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 220,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-transmission-towers-dusk.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00004",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00002",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "01",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00003",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Control from day one</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00018",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00006",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 01",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00007",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Project management systems and controls",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00008",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>We establish the systems, controls and reporting needed to manage cost, time and quality. Each system is set up to suit the scale and stage of the project, so decisions are made on reliable information.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00009",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00014",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00010",
+                          "text": "Project controls and reporting",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00011",
+                          "text": "Cost, time and quality management",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00012",
+                          "text": "Risk and change tracking",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00013",
+                          "text": "Systems tailored to each project",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00015",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00016",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Clear visibility of project status and earlier warning of issues.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00017",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00038",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art abp-art--flip",
+              "_element_id": "svc-2"
+            },
+            "elements": [
+              {
+                "id": "sv00024",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00020",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 234,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-business-planning-meeting.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00023",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00021",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "02",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00022",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Structure that performs</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00037",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00025",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 02",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00026",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Business and organisation planning and development",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00027",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>We help organisations plan and develop the structure, resources and processes they need to perform. This covers short-term assignments through to longer-term development programmes.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00028",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00033",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00029",
+                          "text": "Business planning",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00030",
+                          "text": "Organisational design and development",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00031",
+                          "text": "Resourcing and capability",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00032",
+                          "text": "Process improvement",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00034",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00035",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>An organisation that is set up to deliver its objectives.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00036",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00057",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art",
+              "_element_id": "svc-3"
+            },
+            "elements": [
+              {
+                "id": "sv00043",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00039",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 235,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-water-treatment-aerial.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00042",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00040",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "03",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00041",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Programmes that hold</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00056",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00044",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 03",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00045",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Project planning and scheduling",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00046",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Planning and scheduling for mining, minerals processing, energy and water infrastructure projects. We build programmes that reflect real constraints and keep them current.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00047",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00052",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00048",
+                          "text": "Planning and scheduling for cost, time, quality",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00049",
+                          "text": "Programme development",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00050",
+                          "text": "Schedule review and updates",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00051",
+                          "text": "Progress measurement",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00053",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00054",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>A realistic programme the whole project team can work to.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00055",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00076",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art abp-art--flip",
+              "_element_id": "svc-4"
+            },
+            "elements": [
+              {
+                "id": "sv00062",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00058",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 223,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-open-pit-aerial.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00061",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00059",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "04",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00060",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>The right suppliers</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00075",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00063",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 04",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00064",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Procurement management",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00065",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>We manage procurement strategy, tendering and evaluation to secure the right suppliers and contractors on commercial terms that work for our clients.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00066",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00071",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00067",
+                          "text": "Procurement strategy",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00068",
+                          "text": "Tender documentation",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00069",
+                          "text": "Tender evaluation",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00070",
+                          "text": "Supplier and contractor selection",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00072",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00073",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Contracts awarded to capable suppliers at the right value.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00074",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00095",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art",
+              "_element_id": "svc-5"
+            },
+            "elements": [
+              {
+                "id": "sv00081",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00077",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 231,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-contract-signing.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00080",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00078",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "05",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00079",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Commercial clarity</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00094",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00082",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 05",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00083",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Contracts Management",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00084",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Contract administration and the preparation, assessment and resolution of claims, while maintaining a commercial approach on behalf of our clients.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00085",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00090",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00086",
+                          "text": "Contract administration",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00087",
+                          "text": "Claims preparation and assessment",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00088",
+                          "text": "Variations and change control",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00089",
+                          "text": "Commercial negotiation",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00091",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00092",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Contract positions protected and claims resolved on the facts.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00093",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00114",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art abp-art--flip",
+              "_element_id": "svc-6"
+            },
+            "elements": [
+              {
+                "id": "sv00100",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00096",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 236,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-reviewing-documents.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00099",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00097",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "06",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00098",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Resolution on the record</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00113",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00101",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 06",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00102",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Dispute resolution – negotiation, arbitration, litigation scenarios",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00103",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>We support clients through negotiation, arbitration and litigation scenarios, built on clear records, analysis and an understanding of project and business needs.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00104",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00109",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00105",
+                          "text": "Negotiation support",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00106",
+                          "text": "Arbitration",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00107",
+                          "text": "Litigation scenarios",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00108",
+                          "text": "Records and analysis",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00110",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00111",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Disputes resolved efficiently with a well-supported position.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00112",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00133",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art",
+              "_element_id": "svc-7"
+            },
+            "elements": [
+              {
+                "id": "sv00119",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00115",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 224,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-minerals-processing-plant.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00118",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00116",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "07",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00117",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>An independent view</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00132",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00120",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 07",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00121",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Audits",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00122",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Independent review of project and business performance, processes and compliance, including statutory, social and environmental considerations.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00123",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00128",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00124",
+                          "text": "Project audits",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00125",
+                          "text": "Process and compliance reviews",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00126",
+                          "text": "Performance reviews",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00127",
+                          "text": "Findings and recommendations",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00129",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00130",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>A clear, independent picture of performance and what to improve.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00131",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sv00152",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-art abp-art--flip",
+              "_element_id": "svc-8"
+            },
+            "elements": [
+              {
+                "id": "sv00138",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__media"
+                },
+                "elements": [
+                  {
+                    "id": "sv00134",
+                    "elType": "widget",
+                    "widgetType": "image",
+                    "settings": {
+                      "image": {
+                        "id": 237,
+                        "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/page-substation-sunset.jpg",
+                        "source": "library"
+                      },
+                      "image_size": "full",
+                      "_css_classes": "abp-fill"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00137",
+                    "elType": "container",
+                    "isInner": true,
+                    "settings": {
+                      "content_width": "full",
+                      "css_classes": "abp-art__cap"
+                    },
+                    "elements": [
+                      {
+                        "id": "sv00135",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                          "title": "08",
+                          "header_size": "div",
+                          "title_color": "#FFFFFF",
+                          "_css_classes": "abp-art__n"
+                        },
+                        "elements": []
+                      },
+                      {
+                        "id": "sv00136",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                          "editor": "<p>Decisions with confidence</p>",
+                          "text_color": "#D5D8F0",
+                          "_css_classes": "abp-art__lead"
+                        },
+                        "elements": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sv00151",
+                "elType": "container",
+                "isInner": true,
+                "settings": {
+                  "content_width": "full",
+                  "css_classes": "abp-art__body"
+                },
+                "elements": [
+                  {
+                    "id": "sv00139",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Service 08",
+                      "header_size": "div",
+                      "_css_classes": "abex-pill abp-pill--bone"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00140",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Concept review, estimates and scheduling",
+                      "header_size": "h2",
+                      "_css_classes": "abp-art__t"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00141",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Early-phase concept review, cost estimates and schedules that inform investment and funding decisions, including feasibility studies and options analysis.</p>",
+                      "_css_classes": "abex-body"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00142",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "What’s involved",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00147",
+                    "elType": "widget",
+                    "widgetType": "icon-list",
+                    "settings": {
+                      "icon_list": [
+                        {
+                          "_id": "sv00143",
+                          "text": "Concept review",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00144",
+                          "text": "Cost estimates",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00145",
+                          "text": "Early-phase scheduling",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        },
+                        {
+                          "_id": "sv00146",
+                          "text": "Options and feasibility input",
+                          "selected_icon": {
+                            "value": "",
+                            "library": ""
+                          }
+                        }
+                      ],
+                      "view": "traditional",
+                      "_css_classes": "abex-ticklist abp-tick2"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00148",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                      "title": "Typical outcome",
+                      "header_size": "div",
+                      "_css_classes": "abp-eyebrow"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00149",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                      "editor": "<p>Investment decisions made on sound estimates and timeframes.</p>",
+                      "_css_classes": "abp-outcome"
+                    },
+                    "elements": []
+                  },
+                  {
+                    "id": "sv00150",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                      "text": "Discuss this service",
+                      "link": {
+                        "url": "/contact/",
+                        "is_external": "",
+                        "nofollow": ""
+                      },
+                      "_css_classes": "abex-btn"
+                    },
+                    "elements": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sv00187",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+      "content_width": "full",
+      "css_classes": "abp-cta abp-cta--navy",
+      "background_background": "classic",
+      "background_color": "#141B7A"
+    },
+    "elements": [
+      {
+        "id": "sv00186",
+        "elType": "container",
+        "isInner": true,
+        "settings": {
+          "content_width": "full",
+          "css_classes": "abp-wrap abp-cta__in",
+          "flex_direction": "row"
+        },
+        "elements": [
+          {
+            "id": "sv00184",
+            "elType": "container",
+            "isInner": true,
+            "settings": {
+              "content_width": "full",
+              "css_classes": "abp-cta__txt"
+            },
+            "elements": [
+              {
+                "id": "sv00182",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                  "title": "From short-term assignments to longer-term teams",
+                  "header_size": "h2",
+                  "title_color": "#FFFFFF",
+                  "_css_classes": "abex-h2"
+                },
+                "elements": []
+              },
+              {
+                "id": "sv00183",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                  "editor": "<p>Tell us about your project or business and we will match the right resources to it.</p>",
+                  "text_color": "#D5D8F0",
+                  "_css_classes": "abp-cta__p"
+                },
+                "elements": []
+              }
+            ]
+          },
+          {
+            "id": "sv00185",
+            "elType": "widget",
+            "widgetType": "button",
+            "settings": {
+              "text": "Contact us",
+              "link": {
+                "url": "/contact/",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "_css_classes": "abex-btn"
+            },
+            "elements": []
+          }
+        ]
+      }
+    ]
+  }
+]

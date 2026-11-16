@@ -11,19 +11,23 @@
   "plugins": {
     "elementor": "4.3.6",
     "header-footer-elementor (UAE)": "2.9.6",
+    "contact-form-7": "6.2.5",
     "atarim-visual-collaboration": "5.1.9"
   },
   "pages": {
     "27": "Home (front page, Elementor)",
-    "28": "About Us (published, empty)",
-    "29": "Services (published, empty)",
-    "30": "Clients (published, empty)",
-    "31": "Contact Us (published, empty)",
+    "28": "About Us (published, Elementor)",
+    "29": "Services (published, Elementor)",
+    "30": "Clients (published, Elementor, slug /clientele/)",
+    "31": "Contact Us (published, Elementor, slug /contact/)",
     "2": "Sample Page (WP default, published)",
     "3": "Privacy Policy (draft)"
   },
   "elementor_hf": {
     "37": "ABEX Header",
     "38": "ABEX Footer"
+  },
+  "contact_forms": {
+    "239": "ABEX Contact Page Enquiry (Contact Form 7) — see site/cf7-form-239.json"
   }
 }
