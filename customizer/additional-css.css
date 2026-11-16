@@ -2423,3 +2423,52 @@ body .elementor-element.elementor-element-ftrlogo { padding-bottom: 8px !importa
     border-left: 1px solid var(--abex-rule-navy) !important; padding: 7px 0 7px 16px !important;
   }
 }
+
+
+/* ==================================================================
+   Home: large phones / small tablets and tablets
+
+   1. 561-767px: "Where we work" left ~990px of blank space under the
+      cards. Each card had min-height plus aspect-ratio 3/4, which forces
+      it wider than its column and makes the grid reserve the height of a
+      single-column stack. A fixed card height on an explicit two-column
+      grid replaces both.
+   2. 768-1024px: the same min-height/aspect pair kept every card at least
+      255px wide, so only three fitted and the fourth dropped to a row of
+      its own. Four columns with a fixed card height, as on desktop.
+   3. 561-767px: value and service cards ran one per row; they now sit
+      three across, matching the tablet layout.
+   ================================================================== */
+@media (min-width: 561px) and (max-width: 767px) {
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0,
+  body .elementor-element.elementor-element-svcrow0.elementor-element-svcrow0 > .e-con-inner { flex-direction: row !important; flex-wrap: nowrap !important; gap: 0 14px !important; }
+  body .elementor-element.elementor-element-svccard1.elementor-element-svccard1,
+  body .elementor-element.elementor-element-svccard2.elementor-element-svccard2,
+  body .elementor-element.elementor-element-svccard3.elementor-element-svccard3 { width: calc((100% - 28px) / 3) !important; --width: calc((100% - 28px) / 3) !important; flex: 0 0 calc((100% - 28px) / 3) !important; min-width: 0 !important; max-width: none !important; }
+  body .elementor-element.elementor-element-val00001.elementor-element-val00001,
+  body .elementor-element.elementor-element-val00001.elementor-element-val00001 > .e-con-inner { flex-direction: row !important; flex-wrap: nowrap !important; gap: 0 !important; }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 { width: 33.333% !important; --width: 33.333% !important; flex: 0 0 33.333% !important; min-width: 0 !important; max-width: none !important; }
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2,
+  body .elementor-element.elementor-element-valc3.elementor-element-valc3 { padding-left: 14px !important; border-left: 1px solid #E4E1DA !important; }
+  body .elementor-element.elementor-element-valc1.elementor-element-valc1,
+  body .elementor-element.elementor-element-valc2.elementor-element-valc2 { padding-right: 14px !important; }
+  .elementor-element-cligrid div[style*="grid-template-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-auto-rows: 360px !important; height: auto !important; }
+  .elementor-element-cligrid .abex-sector { aspect-ratio: auto !important; min-height: 0 !important; height: 360px !important; }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-element-cligrid div[style*="grid-template-columns"] { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 12px !important; }
+  .elementor-element-cligrid .abex-sector { aspect-ratio: auto !important; min-height: 0 !important; height: 320px !important; min-width: 0 !important; }
+  .elementor-element-cligrid .abex-sector strong { font-size: 17px !important; }
+  .elementor-element-cligrid .abex-sector > span:last-of-type { left: 16px !important; right: 14px !important; bottom: 16px !important; gap: 6px !important; }
+  .elementor-element-cligrid .abex-sector > span:last-of-type span { font-size: 13px !important; }
+}
+
+
+/* Home "Where we work": the cards already sit two per row from about 500px,
+   so the empty-gap fault reached below 561px too. Same fix, 500-560px. */
+@media (min-width: 500px) and (max-width: 560px) {
+  .elementor-element-cligrid div[style*="grid-template-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-auto-rows: 340px !important; height: auto !important; }
+  .elementor-element-cligrid .abex-sector { aspect-ratio: auto !important; min-height: 0 !important; height: 340px !important; }
+}
