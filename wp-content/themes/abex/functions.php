@@ -55,6 +55,11 @@ add_action( 'wp_enqueue_scripts', 'abex_enqueue_assets', 20 );
 /**
  * Load the design system inside the Elementor editor canvas too, so what the
  * editor shows matches the front end.
+ *
+ * Canvas only (elementor/preview/enqueue_styles). It was also hooked to
+ * elementor/editor/after_enqueue_styles, which loaded abex.css into the
+ * editor's own interface: its body colour (dark navy) turned the Structure
+ * panel's labels dark on the dark panel.
  */
 function abex_enqueue_editor_assets() {
 	wp_enqueue_style(
@@ -71,7 +76,6 @@ function abex_enqueue_editor_assets() {
 		ABEX_VERSION
 	);
 }
-add_action( 'elementor/editor/after_enqueue_styles', 'abex_enqueue_editor_assets' );
 add_action( 'elementor/preview/enqueue_styles', 'abex_enqueue_editor_assets' );
 
 /**
