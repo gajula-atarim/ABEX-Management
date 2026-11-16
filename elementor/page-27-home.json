@@ -1314,7 +1314,7 @@
             "id": "tsthr",
             "elType": "widget",
             "settings": {
-              "editor": "<p>We work across heavy industry, including mines and mining, minerals processing, energy generation and transmission, and water supply and reticulation.</p>",
+              "editor": "<p>We work across mines and mining, minerals processing, energy generation and transmission, and water supply and reticulation.</p>",
               "_css_classes": "abex-small",
               "_element_width": "initial",
               "_element_custom_width": {

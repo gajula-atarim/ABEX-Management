@@ -75,11 +75,24 @@
           {
             "id": "00f6883",
             "elType": "widget",
+            "widgetType": "image",
             "settings": {
-              "html": "<a href=\"/\" style=\"display:block\" aria-label=\"ABEX Management Services — home\"><span class=\"abex-logo abex-logo--hdr\" role=\"img\" aria-label=\"ABEX Management Services\"></span></a>"
+              "image": {
+                "id": 275,
+                "url": "https://abex-management.wsdfy.com/wp-content/uploads/2026/11/abex-logo-header.gif",
+                "source": "library",
+                "alt": "ABEX Management Services"
+              },
+              "image_size": "full",
+              "link_to": "custom",
+              "link": {
+                "url": "/",
+                "is_external": "",
+                "nofollow": ""
+              },
+              "_css_classes": "abex-hdrlogo"
             },
-            "elements": [],
-            "widgetType": "html"
+            "elements": []
           },
           {
             "id": "hdrnav0",

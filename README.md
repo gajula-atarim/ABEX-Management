@@ -16,7 +16,7 @@ here is deployed automatically.
 | `wp-content/themes/abex/functions.php` | Enqueues, header/footer rendering, the `[abex_enquiry_form]` shortcode and its handler | — |
 | `wp-content/themes/abex/assets/abex.css` | Design system: tokens, components, base responsive rules | — |
 | `wp-content/themes/abex/assets/abex.js` | Scroll reveal + the "How We Work" panel-stack animation | — |
-| `wp-content/themes/abex/assets/abex-logo.css` | Header and footer logo as embedded PNG data URIs | — |
+| `wp-content/themes/abex/assets/abex-logo.css` | Logo as embedded PNG data URIs. No longer used by the header or footer since 2026-11-16 (they use Image blocks with media 275 and 278), still imported by Additional CSS | — |
 | `customizer/additional-css.css` | Iteration layer of fixes (desktop, tablet, mobile) | Appearance → Customize → Additional CSS (theme `abex`) |
 | `elementor/page-27-home.json` | Home page — full Elementor tree with settings | Page 27, `_elementor_data` |
 | `elementor/page-28-about.json` | About Us | Page 28, `_elementor_data` |
