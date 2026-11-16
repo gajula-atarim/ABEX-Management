@@ -17,26 +17,30 @@
     {
       "order": 2,
       "label": "About Us",
-      "type": "custom",
-      "url": "#"
+      "type": "page",
+      "url": "/about/",
+      "object_id": 28
     },
     {
       "order": 3,
       "label": "Services",
-      "type": "custom",
-      "url": "#"
+      "type": "page",
+      "url": "/services/",
+      "object_id": 29
     },
     {
       "order": 4,
       "label": "Clients",
-      "type": "custom",
-      "url": "#"
+      "type": "page",
+      "url": "/clientele/",
+      "object_id": 30
     },
     {
       "order": 5,
       "label": "Contact Us",
-      "type": "custom",
-      "url": "#"
+      "type": "page",
+      "url": "/contact/",
+      "object_id": 31
     }
   ]
 }

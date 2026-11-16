@@ -705,7 +705,8 @@
       "content_width": "full",
       "css_classes": "abp-sec abp-values",
       "background_background": "classic",
-      "background_color": "#141B7A"
+      "background_color": "#141B7A",
+      "_element_id": "values"
     },
     "elements": [
       {

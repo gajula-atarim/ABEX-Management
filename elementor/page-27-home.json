@@ -391,7 +391,7 @@
             "elType": "widget",
             "settings": {
               "link": {
-                "url": "#",
+                "url": "/about/",
                 "nofollow": "",
                 "is_external": ""
               },
@@ -505,7 +505,7 @@
             "elType": "widget",
             "settings": {
               "link": {
-                "url": "#",
+                "url": "/about/#values",
                 "nofollow": "",
                 "is_external": ""
               },
@@ -592,7 +592,7 @@
             "elType": "widget",
             "settings": {
               "link": {
-                "url": "#",
+                "url": "/about/#values",
                 "nofollow": "",
                 "is_external": ""
               },
@@ -669,7 +669,7 @@
             "elType": "widget",
             "settings": {
               "link": {
-                "url": "#",
+                "url": "/about/#values",
                 "nofollow": "",
                 "is_external": ""
               },
@@ -848,7 +848,7 @@
                 "elType": "widget",
                 "settings": {
                   "link": {
-                    "url": "#",
+                    "url": "/services/#svc-1",
                     "nofollow": "",
                     "is_external": ""
                   },
@@ -931,7 +931,7 @@
                 "elType": "widget",
                 "settings": {
                   "link": {
-                    "url": "#",
+                    "url": "/services/#svc-3",
                     "nofollow": "",
                     "is_external": ""
                   },
@@ -1014,7 +1014,7 @@
                 "elType": "widget",
                 "settings": {
                   "link": {
-                    "url": "#",
+                    "url": "/services/#svc-5",
                     "nofollow": "",
                     "is_external": ""
                   },

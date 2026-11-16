@@ -51,9 +51,6 @@ Elementor itself stores, pretty-printed so diffs are readable.
     (Contact → Contact Forms → ABEX Contact Page Enquiry → Mail).
 - `search_engine_visible` is `false` (staging, `noindex`). Turn it on at launch.
 - No SMTP plugin is installed, so `wp_mail()` falls back to PHP `mail()`.
-- The header menu items About Us, Services, Clients and Contact Us, and the
-  footer Navigation and Services links, still point to `#` on purpose. Link
-  them to `/about/`, `/services/`, `/clientele/` and `/contact/` at launch.
 
 ## Sync history
 
